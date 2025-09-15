@@ -32,7 +32,7 @@
       </div>
       <h1>KEVIN LIU</h1>
 <div id="intro-text">
-  <p><br> Hey! I&apos;m a final-semester Computer Science Specialization undergrad student at Western University (UWO) in Ontario, Canada.</p>
+  <p><br> Hey! I&apos;m a final-semester Computer Science specialized undergrad student at Western University (UWO) in Ontario, Canada 🇨🇦.</p>
 
   <br> <br>
   <p>I&apos;ve had experience with machine learning pipelines, full stack development, agile project management, and graphic design.</p>
@@ -43,64 +43,64 @@
   </p>
 
   <br> <br>
-  <p>Feel free to view my team projects + little passion projects below! (blue texts are clickable links) ⬇️<br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br> </p>
+  <p>Feel free to view my team projects + little passion projects below! ↓️ (<span style="color: var(--blue);">blue texts</span> are clickable links)<br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br> </p>
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("intro-text");
+<!--<script>-->
+<!--document.addEventListener("DOMContentLoaded", () => {-->
+<!--  const container = document.getElementById("intro-text");-->
 
-  // Hide all children initially
-  container.querySelectorAll("*").forEach(el => el.style.opacity = 0);
+  
+<!--  container.querySelectorAll("*").forEach(el => el.style.opacity = 0);-->
 
-  function typeNode(node, callback) {
-    if (node.nodeType === Node.TEXT_NODE) {
-      const text = node.textContent;
-      node.textContent = "";
-      let i = 0;
-      const interval = setInterval(() => {
-        node.textContent += text[i];
-        i++;
-        if (i >= text.length) {
-          clearInterval(interval);
-          callback();
-        }
-      }, 5); // very fast
-    } else if (node.nodeType === Node.ELEMENT_NODE) {
-      node.style.opacity = 1; // reveal the element container
-      let children = Array.from(node.childNodes);
-      let index = 0;
-      function nextChild() {
-        if (index < children.length) {
-          typeNode(children[index], () => {
-            index++;
-            nextChild();
-          });
-        } else {
-          callback();
-        }
-      }
-      nextChild();
-    } else {
-      callback();
-    }
-  }
+<!--  function typeNode(node, callback) {-->
+<!--    if (node.nodeType === Node.TEXT_NODE) {-->
+<!--      const text = node.textContent;-->
+<!--      node.textContent = "";-->
+<!--      let i = 0;-->
+<!--      const interval = setInterval(() => {-->
+<!--        node.textContent += text[i];-->
+<!--        i++;-->
+<!--        if (i >= text.length) {-->
+<!--          clearInterval(interval);-->
+<!--          callback();-->
+<!--        }-->
+      
+<!--    } else if (node.nodeType === Node.ELEMENT_NODE) {-->
+      
+<!--      let children = Array.from(node.childNodes);-->
+<!--      let index = 0;-->
+<!--      function nextChild() {-->
+<!--        if (index < children.length) {-->
+<!--          typeNode(children[index], () => {-->
+<!--            index++;-->
+<!--            nextChild();-->
+<!--          });-->
+<!--        } else {-->
+<!--          callback();-->
+<!--        }-->
+<!--      }-->
+<!--      nextChild();-->
+<!--    } else {-->
+<!--      callback();-->
+<!--    }-->
+<!--  }-->
 
-  let nodes = Array.from(container.childNodes);
-  let index = 0;
+<!--  let nodes = Array.from(container.childNodes);-->
+<!--  let index = 0;-->
 
-  function nextNode() {
-    if (index < nodes.length) {
-      typeNode(nodes[index], () => {
-        index++;
-        nextNode();
-      });
-    }
-  }
+<!--  function nextNode() {-->
+<!--    if (index < nodes.length) {-->
+<!--      typeNode(nodes[index], () => {-->
+<!--        index++;-->
+<!--        nextNode();-->
+<!--      });-->
+<!--    }-->
+<!--  }-->
 
-  nextNode();
-});
-</script>
+<!--  nextNode();-->
+<!--});-->
+<!--</script>-->
 
     </div>
 
@@ -141,13 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
 <a class="game-card" href="https://github.com/kev-liu-dev/predict-retirement-contribs" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;">Insurance Predictor</h3>
   <p class="short-desc" style="color: var(--red);">
-  A ML model trained to analyze & predict household infsurance spending. <br><br>
+  An Elastic Net model predicting household spending on retirement savings. <br><br>
   <span style="color: var(--purple); text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span>
 </p>
 
   <div class="extra-info">
   <br>
-      <span style="color: var(--red);">Python, Colab, Scikitgreenn, Pandas, NumPy</span>
+      <span style="color: var(--red);">Python, Colab, Skikit-learn, Polars, Pandas, NumPy</span>
   </div>
 </a>
 
@@ -166,10 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <a class="game-card" href="https://github.com/kev-liu-dev/spotifyplaylistgenerator?tab=readme-ov-file" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Playlist Generator</h3>
-  <p class="short-desc"style="color: var(--red);">A website that generates personalized playlists for users. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <p class="short-desc"style="color: var(--red);">An application that generates personalized playlists for users. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
   <div class="extra-info">
   <br>
-      <span style="color: var(--red);">Python, React, Spotify API, OpenAI API, Git</span>. 
+      <span style="color: var(--red);">Python, React, Spotify API, OpenAI API, Git</span>
   </div>
 </a>
 
