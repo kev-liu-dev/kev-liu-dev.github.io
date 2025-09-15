@@ -1,0 +1,526 @@
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Braah+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="icon" href="profile.jpg" type="image/jpeg">
+<meta charset="UTF-8">
+
+
+<body>
+  <div class="container">
+    <div class="header">
+     <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="text-align: center;">
+<div class="flip-wrapper">
+  <div class="flip-container">
+    <div class="flip-card">
+      <img class="front" src="profile.jpg" alt="Kevin Liu">
+      <img class="back" src="k11.jpg" alt="Kevin Liu">
+    </div>
+  </div>
+</div>
+
+
+        <br>
+        <br>
+        <br>
+      </div>
+      <h1>KEVIN LIU</h1>
+<div id="intro-text">
+  <p><br> Hey! I&apos;m a final-semester Computer Science Specialization undergrad student at Western University (UWO) in Ontario, Canada.</p>
+
+  <br> <br>
+  <p>I&apos;ve had experience with machine learning pipelines, full stack development, agile project management, and graphic design.</p>
+
+  <br> <br>
+
+  <p>In my free time, I enjoy playing pool, designing art, listening to new music, and hanging out with friends.</strong>
+  </p>
+
+  <br> <br>
+  <p>Feel free to view my team projects + little passion projects below! (blue texts are clickable links) ⬇️<br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br> </p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("intro-text");
+
+  // Hide all children initially
+  container.querySelectorAll("*").forEach(el => el.style.opacity = 0);
+
+  function typeNode(node, callback) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.textContent;
+      node.textContent = "";
+      let i = 0;
+      const interval = setInterval(() => {
+        node.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+          clearInterval(interval);
+          callback();
+        }
+      }, 5); // very fast
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      node.style.opacity = 1; // reveal the element container
+      let children = Array.from(node.childNodes);
+      let index = 0;
+      function nextChild() {
+        if (index < children.length) {
+          typeNode(children[index], () => {
+            index++;
+            nextChild();
+          });
+        } else {
+          callback();
+        }
+      }
+      nextChild();
+    } else {
+      callback();
+    }
+  }
+
+  let nodes = Array.from(container.childNodes);
+  let index = 0;
+
+  function nextNode() {
+    if (index < nodes.length) {
+      typeNode(nodes[index], () => {
+        index++;
+        nextNode();
+      });
+    }
+  }
+
+  nextNode();
+});
+</script>
+
+    </div>
+
+    <div class="nav-container">
+      <nav class="nav-bar">
+       <a class="nav-item active" data-page="projects"><strong>Projects</strong></a>
+<a class="nav-item" data-page="experiences"><strong>Experiences</strong></a>
+<a class="nav-item" data-page="skills"><strong>Skills</strong></a>
+<a class="nav-item" data-page="achievements"><strong>Certificates</strong></a>
+<a class="nav-item" data-page="contact"><strong>Contact</strong></a>
+
+        
+      </nav>
+    </div>
+
+    <!-- Content area -->
+    <div id="content-area"></div>
+    
+  </div>
+
+  <script>
+    const contentArea = document.getElementById("content-area");
+    const navItems = document.querySelectorAll(".nav-item");
+
+    // Portfolio content
+    const pages = {
+  projects: `
+  
+ <br><br><h2>Projects</h2>
+<br>
+<p class="short-desc" style="color: var(--green); font-size: 1rem;">
+  Hover over each project to view the tech stack used
+</p>
+<br>
+
+<div class="game-preview">
+
+<a class="game-card" href="https://github.com/kev-liu-dev/predict-retirement-contribs" target="_blank">
+  <h3 style="margin-top: 12px; margin-bottom: 12px;">Insurance Predictor</h3>
+  <p class="short-desc" style="color: var(--red);">
+  A ML model trained to analyze & predict household infsurance spending. <br><br>
+  <span style="color: var(--purple); text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span>
+</p>
+
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Python, Colab, Scikitgreenn, Pandas, NumPy</span>
+  </div>
+</a>
+
+<a class="game-card" href="https://github.com/kev-liu-dev/Rasp-Pi-NAS-App" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Raspberry Pi NAS App</h3>
+  <p class="short-desc"style="color: var(--red);">
+  A database-backed NAS app for file storage, sorting, and management. <br><br>
+  <span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span>
+</p></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">C++, QT Creator, Rest APIs, Git, Figma</span>
+
+  </div>
+</a>
+
+<a class="game-card" href="https://github.com/kev-liu-dev/spotifyplaylistgenerator?tab=readme-ov-file" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Playlist Generator</h3>
+  <p class="short-desc"style="color: var(--red);">A website that generates personalized playlists for users. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Python, React, Spotify API, OpenAI API, Git</span>. 
+  </div>
+</a>
+
+<a class="game-card" href="https://github.com/kev-liu-dev/spellchecker" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Spell Checker Website</h3>
+  <p class="short-desc"style="color: var(--red);">A website that can provide corrections for user's entered words. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Java, JavaFX, Git, Figma</span>
+  </div>
+</a>
+
+<a class="game-card" href="https://github.com/kev-liu-dev/escapethedungeon" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Escape the <br>Dungeon</h3>
+  <p class="short-desc"style="color: var(--red);">A program that calculates the shortest path to the exit in a dungeon.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Java, Java Swing, Eclipse</span>
+  </div>
+</a>
+
+
+
+<a class="game-card" href="https://sizzleclubs.web.app/" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Sizzle Tech <br>Clubs</h3>
+  <p class="short-desc"style="color: var(--red);">A website displaying info about all of UWO's student-run tech clubs. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">HTML, CSS, JS, Firebase</span>
+  </div>
+</a>
+
+
+<a class="game-card" href="https://nice-purity-test.web.app/" target="_blank">
+  <h3 style="margin-top: 12px; margin-bottom: 12px;">Nice Purity <br>Test</h3>
+  <p class="short-desc"style="color: var(--red);">A checklist-style test that tests how nice you are on a scale of 1 to 50. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">HTML, CSS, JS, Firebase</span>
+  </div>
+</a>
+
+
+<a class="game-card" href="https://dinedesignstudio.wixsite.com/juicy-dumpling" target="_blank">
+  <h3 style="margin-top: 12px; margin-bottom: 12px;">Juicy Dumpling Website</h3>
+  <p class="short-desc"style="color: var(--red);">A mock website for Juicy Dumpling, a Shanghai restaurant in Toronto. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Wix</span>
+  </div>
+</a>
+
+
+<a class="game-card" href="https://k11games.itch.io/dunk-shot" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Dunk Shot <br> Game</h3>
+  <p class="short-desc"style="color: var(--red);">A game with custom physics engine for realistic ball-net collisions. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
+  </div>
+</a>
+
+<a class="game-card" href="https://k11games.itch.io/sling-drift" target="_blank">
+  <h3 style="margin-top: 12px; margin-bottom: 12px;">Sing Drift <br> Game</h3>
+  <p class="short-desc"style="color: var(--red);">A game with a custom car drifting code and slick designs.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
+  </div>
+</a>
+
+<a class="game-card" href="https://k11games.itch.io/drop-the-ball" target="_blank">
+  <h3 style="margin-top: 12px; margin-bottom: 12px;"> Drop the Ball <br> Game</h3>
+  <p class="short-desc"style="color: var(--red);">A game with a custom physics engine for realistic ball collisions.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
+  </div>
+</a>
+
+<a class="game-card" href="https://k11games.itch.io/neon-foosball/" target="_blank">
+  <h3  style="margin-top: 12px; margin-bottom: 12px;">Neon Foosball Game</h3>
+  <p class="short-desc"style="color: var(--red);">A game with a custom AI opponent playing table foosball against you. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <div class="extra-info">
+  <br>
+      <span style="color: var(--red);">Figma, Scratch</span>
+  </div>
+
+</a>
+
+      
+      
+    </div>
+     <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      `,
+      experiences: `
+        <br><br><h2>Experiences</h2>
+        <br>
+        <p>
+<p>Machine Learning Research Intern @ 
+  <a href="https://www.tust.edu.cn/" target="_blank">Tianjin University of Science and Technology</a> (2025).
+</p>
+
+<p> Software Developer / Events Director @ 
+  <a href="https://westerncybersociety.ca/" target="_blank">Western Cyber Society</a> (2023 to 2024).
+</p>
+
+<p>Co-Director of Events @ 
+  <a href="https://torontotechexpo-clubpartners.square.site/" target="_blank">Toronto Tech Expo</a> (2024).
+</p>
+
+<p>Software Developer Intern @ 
+  <a href="https://www.google.com/?hl=zh_CN" target="_blank">Google IT China</a> (2023).
+</p>
+
+<p>Game Designer @ 
+  <a href="https://k11games.itch.io/" target="_blank">K11 Games</a> (2016 to 2022).
+</p>
+
+<br><br>
+<h2>Additional Experiences</h2>
+<br>
+
+<p>Insurance Claims Adjustor @ 
+  <a href="https://mocat.com/" target="_blank">MOCAT</a> (2023).
+</p>
+
+<p>VP Legacy Project @ 
+  <a href="https://webberacademy.ca/" target="_blank">Webber Academy</a> (2019 to 2020).
+</p>
+
+<p>Math Tutor @ 
+  <a href="https://webberacademy.ca/" target="_blank">Webber Academy</a> (2019 to 2020).
+</p>
+
+<p>English Second Language Teacher @ 
+  <a href="https://www.ocac.gov.tw/OCAC/Eng/" target="_blank">Taiwan Aid</a> (2019).
+</p>
+
+<p>Student Android Developer @ 
+  <a href="https://oxbridgeprograms.com/" target="_blank">Oxbridge Academic Programs</a> (2018).
+</p>
+
+<p>Oil Painting Student @ 
+  <a href="https://www.swintonsart.com/" target="_blank">Swinton's Art Club</a> (<a href="https://www.instagram.com/kevinarttt" target="_blank">view my art</a>)  (2014 to 2020).
+</p>
+
+    <br>
+    <p>See more at my <a href="https://www.linkedin.com/in/kevinliu-uwo/" target="_blank">LinkedIn</a></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      `,
+      skills: `
+        <br><br><h2>Skills</h2>
+        <br>
+        <p ><strong style="color: var(--red);">Languages:</strong> <br>Python, Java, C++, C, C#, R, JavaScript, SQL, HTML5, CSS</p>
+        <br>
+        <p ><strong style="color: var(--red);">Frameworks & Tools:</strong> <br>React, Node.js, Flask, Bootstrap, Git, YOLO, FFmpeg, Figma</p>
+        <br>
+        <p ><strong style="color: var(--red);">Libraries:</strong> <br>NumPy, Pandas, Matplotlib, Seaborn</p>
+        <br>
+       <p ><strong style="color: var(--red);">Languages Spoken:</strong></p>
+
+<div style="text-align: center; margin: 5px 0;">
+  <p> English </p>
+  <div style="background-color: var(--green); width: 150px; height: 10px; border-radius: 5px; margin: 5px auto;
+              border: 1px solid darkred;">
+    <div style="width: 100%; height: 100%; background-color: var(--red); border-radius: 5px;
+                box-shadow: 2px 0px 0px darkred;"></div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 5px 0;">
+  <p> Mandarin </p>
+  <div style="background-color: var(--green); width: 150px; height: 10px; border-radius: 5px; margin: 5px auto;
+              border: 1px solid darkred;">
+    <div style="width: 80%; height: 100%; background-color: var(--red); border-radius: 5px;
+                box-shadow: 2px 0px 0px darkred;"></div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 5px 0;">
+  <p> Spanish </p>
+  <div style="background-color: var(--green); width: 150px; height: 10px; border-radius: 5px; margin: 5px auto;
+              border: 1px solid darkred;">
+    <div style="width: 40%; height: 100%; background-color: var(--red); border-radius: 5px;
+                box-shadow: 2px 0px 0px darkred;"></div>
+  </div>
+</div>
+
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      
+</div>
+
+      `,
+      
+      achievements: `
+        <br><br><h2>Certificates & Random Achievements</h2>
+    <br>
+    <p>IBM Z Xplore - Concepts Certificate</p>
+    <p>IBM Z Xplore - Advanced Certificate</p>
+    <p>Spanish DELE A1, A2, B1 Exams</p>
+    <p>Google Cloud Professional Data Engineer Certificate - In Progress</p>
+    <p>Completed HTML CSS JS and Graph Theory Algorithm Udemy courses</p>
+    <p>2nd place in the Power Round of ASDAN Math Tournament</p>
+    <p>Top 20% in Guts round at ASDAN Math Tournament</p>
+    <p>President's Scholarship of Distinction Entrance Scholarship at Waterloo (UW)</p>
+    <p>Alexander Rutherford Scholarship</p>
+    
+    <p>AP Scholar with Distinction</p>
+    <p>Top 1% SAT Scorer - 800 math, 710 reading</p>
+    <p>Above 80% in all CS courses at Western University</p>
+    <p>Top 0.6% fastest typer on Typeracer - average 115 wpm</p>
+    <p>21st most followed user on Scratch (<a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank">view stats</a>)</p>
+    <p>7 million total views on all games (<a href="https://k11games.itch.io/" target="_blank">view games</a>)</p>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      `,
+      contact: `
+        <br><br><h2>Contact</h2>
+        <br>
+        <p>Email: kliu469@uwo.ca</p> <br>
+        <p>Phone: (403) 660-3554</p><br>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kevinliu-uwo/">linkedin.com/in/kevinliu-uwo</a></p><br>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+      `
+      
+      
+      
+    };
+
+
+    // Default load
+    contentArea.innerHTML = pages.projects;
+
+    // Handle nav clicks
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        navItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+        const page = item.getAttribute("data-page");
+        contentArea.innerHTML = pages[page];
+      });
+    });
+    
+  </script>
+  
+  <p style="font-size: 0.7rem; text-align: center; margin-top: 30px; color: var(--yellow);">
+    Made in 2025 by Kevin Liu
+     <br>
+        <br>
+        <br>
+  </p>
+</body>
+
+
+
+
+</body>
