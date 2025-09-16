@@ -140,7 +140,7 @@ font-family: "Press Start 2P", system-ui;
 .game-card:nth-child(12) { transform: translateZ(-22px);  z-index: 1;  }
 
 .game-card:hover {
-  background: linear-gradient(45deg, #36002B, #36002B);
+  background: linear-gradient(45deg, #2B0028, #400034);
     /*height: 170px; */
     /*box-shadow: 0 0px 70px rgba(0, 0, 0, 1);*/
     /*border-radius: 30px 30px 0 0;*/
@@ -201,7 +201,7 @@ font-family: "Press Start 2P", system-ui;
 
 
 :root {
-    --black: #302352;
+    --black: #4A0F59;
     --white: #f8f8f8;
     --yellow: #ffbc42;
     --red: #FA1E6C;
@@ -338,7 +338,8 @@ p strong {
   text-align: center;
   font-size: 1.2rem !important;   
   
-  color: #F54DFF !important; 
+  /*text color*/
+  color: var(--darkblue) !important; 
   line-height: 1.4 !important;  
 }
 
@@ -366,7 +367,7 @@ p strong {
        -10px 10px 0 #302352;
   }
     .p-box:hover {
-      background-color: #3B0032; 
+      background: linear-gradient(45deg, #2B0028, #400034);
       transform: translate(-10px, 10px);  
       box-shadow: 
       -1px 1px 0 var(--black);
@@ -417,6 +418,10 @@ p strong {
 
 .nav-container:hover {
     transform: translateX(-5px) translateY(5px);
+    box-shadow: 0 0px 50px rgba(0, 0, 0,1);
+       box-shadow: 
+      
+      -0px 0px 0 var(--black);
     
     /*box-shadow: 0 0 10px rgba(172,151,230, 0.2),*/
     /*            0 10px 20px rgba(0,0,0,0);*/
