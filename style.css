@@ -3,9 +3,9 @@
 
 
 
-li {
-  margin-top: 10px; 
-}
+/*li {*/
+/*  margin-top: 10px; */
+/*}*/
 
 
 #content-area {
@@ -77,22 +77,37 @@ font-family: "Press Start 2P", system-ui;
 #content-area p a:hover {
   text-decoration: underline; 
 }
+
+.game-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
 .game-card {
     background: linear-gradient(45deg, #2B0028, #2B0028);
     
     border: 3px groove var(--darkpurple);
-    outline-offset: 0px;
-    padding: 4px;
-    border-radius: 0px 0px 0 0;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 30px;
 
     text-align: center;
-    transition: height 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.2s ease;
     transform-origin: center;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    height: 200px;
+    width: 170px;
+    height: 210px;
+    
+    transition: 0.2s ease;
+    overflow: hidden;
+    position: relative;
+    align-self: flex-end; /* makes shrinking happen from the top */
     box-shadow: 
       -1px 1px 0 var(--black),
       -2px 2px 0 var(--black),
@@ -104,36 +119,38 @@ font-family: "Press Start 2P", system-ui;
       -8px 8px 0 var(--black),
       -9px 9px 0 var(--black),
       -10px 10px 0 var(--black);
+      /*-11px 11px 0 var(--black),*/
+      /*-12px 12px 0 var(--black),*/
+      /*-13px 13px 0 var(--black);*/
+          margin: 0; /* remove any default margin */
+    align-self: flex-start; /* makes top edges align perfectly */
 }
 
-.game-card {
-    height: 200px;
-    transition: height 0.2s ease, 
-                box-shadow 0.2s ease, 
-                border-radius 0.2s ease, 
-                background-color 0.2s ease;
-    overflow: hidden;
-    position: relative;
-    align-self: flex-end; /* makes shrinking happen from the top */
-}
+.game-card:nth-child(1)  { transform: translateZ(0px);    z-index: 12; }
+.game-card:nth-child(2)  { transform: translateZ(-2px);   z-index: 11; }
+.game-card:nth-child(3)  { transform: translateZ(-4px);   z-index: 10; }
+.game-card:nth-child(4)  { transform: translateZ(-6px);   z-index: 9;  }
+.game-card:nth-child(5)  { transform: translateZ(-8px);   z-index: 8;  }
+.game-card:nth-child(6)  { transform: translateZ(-10px);  z-index: 7;  }
+.game-card:nth-child(7)  { transform: translateZ(-12px);  z-index: 6;  }
+.game-card:nth-child(8)  { transform: translateZ(-14px);  z-index: 5;  }
+.game-card:nth-child(9)  { transform: translateZ(-16px);  z-index: 4;  }
+.game-card:nth-child(10) { transform: translateZ(-18px);  z-index: 3;  }
+.game-card:nth-child(11) { transform: translateZ(-20px);  z-index: 2;  }
+.game-card:nth-child(12) { transform: translateZ(-22px);  z-index: 1;  }
 
 .game-card:hover {
-    height: 170px; 
-    box-shadow: 0 0px 70px rgba(0, 0, 0, 1);
-    border-radius: 30px 30px 0 0;
+  background: linear-gradient(45deg, #36002B, #36002B);
+    /*height: 170px; */
+    /*box-shadow: 0 0px 70px rgba(0, 0, 0, 1);*/
+    /*border-radius: 30px 30px 0 0;*/
+    transform: translate(-9px, 9px);  
     /*background: linear-gradient(45deg, #380033, #380033);*/
-       box-shadow: 
-    -1px 1px 0 var(--black),
-    -2px 2px 0 var(--black),
-    -3px 3px 0 var(--black),
-    -4px 4px 0 var(--black),
-    -5px 5px 0 var(--black),
-    -6px 6px 0 var(--black),
-    -7px 7px 0 var(--black),
-    -8px 8px 0 var(--black),
-    -9px 9px 0 var(--black),
-    -10px 10px 0 var(--black);
+      box-shadow: 
+      -1px 1px 0 var(--black);
+  
 }
+
 
 
 
@@ -247,12 +264,8 @@ body {
     
 }
 
-.header {
- text-align: center;
- text-shadow: 
-        -1px 1px 0 var(--red);
- 
-}
+
+
 
 .header h1 {
     font-size: 2rem;
@@ -305,6 +318,16 @@ p strong {
   
 }
 
+
+/*3d text effect in the header description*/
+.header {
+ text-align: center;
+ text-shadow: 
+        -1px 1px 0 #6E0A73;
+ 
+}
+
+
 #intro-text {
   height: 600px;             
 
@@ -312,11 +335,45 @@ p strong {
 
 
 #intro-text p {
-  text-align: left;
+  text-align: center;
   font-size: 1.2rem !important;   
-  color: var(--yellow) !important; 
+  
+  color: #F54DFF !important; 
   line-height: 1.4 !important;  
 }
+
+  .p-box {
+            background-color: #2B0028; 
+            transition: 0.2s ease;
+            border-radius: 30px; 
+            padding: 15px 15px; 
+            max-width: 800px; 
+            border: 3px groove var(--blue);
+            text-align: center;
+            margin: auto;
+            box-shadow: 
+      -1px 1px 0 var(--black),
+      -2px 2px 0 var(--black),
+      -3px 3px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -5px 5px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -7px 7px 0 var(--black),
+      -8px 8px 0 var(--black),
+      -9px 9px 0 var(--black),
+      -10px 10px 0 var(--black),
+       0 0px 50px #170015,
+       -10px 10px 0 #302352;
+  }
+    .p-box:hover {
+      background-color: #3B0032; 
+      transform: translate(-10px, 10px);  
+      box-shadow: 
+      -1px 1px 0 var(--black);
+  
+        
+  }
+
 
 
 
@@ -394,7 +451,8 @@ p strong {
   transform-style: preserve-3d;
   border-radius: 50%;
   animation: autoFlip 10s infinite; 
-  box-shadow: 0 0 30px var(--black);
+  
+  box-shadow: 0 0px 5px var(--yellow), 0 0px 20px #170015;
 }
 
 .flip-card img {
@@ -522,12 +580,6 @@ p strong {
     color: var(--yellow);
 }
 
-.game-preview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
 
 
 .crt-overlay {
