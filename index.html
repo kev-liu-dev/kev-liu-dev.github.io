@@ -531,20 +531,20 @@
   
   
   <!-- sound effect -->
-  <audio id="hover-sound" src="coin.mp3" preload="auto"></audio>
+<audio id="hover-sound" src="coin.mp3" preload="auto"></audio>
 
-  <!-- JS for hover sound -->
-  <script>
-    const hoverSound = document.getElementById("hover-sound");
+<!-- JS for hover sound -->
+<script>
+  const hoverSound = document.getElementById("hover-sound");
 
-    document.querySelectorAll(".game-card").forEach(card => {
-      card.addEventListener("mouseenter", () => {
-        hoverSound.currentTime = 0;
-        hoverSound.play();
-      });
+  // select both game cards and nav items
+  document.querySelectorAll(".game-card, .nav-item").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
     });
-  </script>
-
+  });
+</script>
 
 
 
