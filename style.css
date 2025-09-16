@@ -86,7 +86,7 @@ font-family: "Press Start 2P", system-ui;
 }
 
 .game-card {
-    background: linear-gradient(45deg, #2B0028, #2B0028);
+    background: linear-gradient(45deg, #2B0028, #400034);
     
     border: 3px groove var(--darkpurple);
     padding: 10px;
@@ -140,7 +140,7 @@ font-family: "Press Start 2P", system-ui;
 .game-card:nth-child(12) { transform: translateZ(-22px);  z-index: 1;  }
 
 .game-card:hover {
-  background: linear-gradient(45deg, #2B0028, #400034);
+  background: linear-gradient(45deg, #2B0028, #2B0028);
     /*height: 170px; */
     /*box-shadow: 0 0px 70px rgba(0, 0, 0, 1);*/
     /*border-radius: 30px 30px 0 0;*/
@@ -344,7 +344,8 @@ p strong {
 }
 
   .p-box {
-            background-color: #2B0028; 
+            
+            background: linear-gradient(45deg, #2B0028, #400034);
             transition: 0.2s ease;
             border-radius: 30px; 
             padding: 15px 15px; 
@@ -367,7 +368,7 @@ p strong {
        -10px 10px 0 #302352;
   }
     .p-box:hover {
-      background: linear-gradient(45deg, #2B0028, #400034);
+      background: linear-gradient(45deg, #2B0028, #2B0028);
       transform: translate(-10px, 10px);  
       box-shadow: 
       -1px 1px 0 var(--black);
@@ -457,7 +458,7 @@ p strong {
   border-radius: 50%;
   animation: autoFlip 10s infinite; 
   
-  box-shadow: 0 0px 5px var(--yellow), 0 0px 20px #170015;
+  box-shadow: 0 0px 4px var(--yellow), 0 0px 20px #170015;
 }
 
 .flip-card img {
@@ -469,7 +470,7 @@ p strong {
   backface-visibility: hidden;
   top: 0;
   left: 0;
-  border: 3px solid var(--yellow);
+  border: 2px solid var(--yellow);
 }
 
 .flip-card .back {
@@ -571,7 +572,7 @@ p strong {
 .nav-item:hover {
     transform: scale(1.0); 
     color: var(--yellow);
-    background-color: rgba(48, 35, 82, 0.1); 
+    background-color: rgba(48, 35, 82, 0.2); 
     border-radius: 0 0 8px 8px;
     padding: 4px 10px; 
     text-shadow: 
