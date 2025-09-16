@@ -336,10 +336,10 @@ p strong {
 
 #intro-text p {
   text-align: center;
-  font-size: 1.2rem !important;   
+  font-size: 1.0rem !important;   
   
   /*text color*/
-  color: var(--darkblue) !important; 
+  color: #A6DAFF !important; 
   line-height: 1.4 !important;  
 }
 
@@ -347,8 +347,8 @@ p strong {
             
             background: linear-gradient(45deg, #2B0028, #400034);
             transition: 0.2s ease;
-            border-radius: 30px; 
-            padding: 15px 15px; 
+            border-radius: 15px; 
+            padding: 10px 15px; 
             max-width: 800px; 
             border: 3px groove var(--blue);
             text-align: center;
@@ -458,7 +458,7 @@ p strong {
   border-radius: 50%;
   animation: autoFlip 10s infinite; 
   
-  box-shadow: 0 0px 4px var(--yellow), 0 0px 20px #170015;
+  box-shadow: 0 0px 7px var(--yellow), 0 0px 20px #170015;
 }
 
 .flip-card img {
