@@ -30,19 +30,46 @@
         <br>
         <br>
       </div>
-      <h1>KEVIN Y. LIU<br><br></h1>
+      <h1 id="main-title">KEVIN Y LIU<br><br></h1>
 <div id="intro-text">
-  <p class="p-box"> Hey! I&apos;m a final-semester Computer Science specialized undergrad student at Western University (UWO) in Ontario, Canada 🇨🇦.</p>
+  <p class="p-box"> Hey! I&apos;m a final-semester Computer Science specialized undergrad student at Western University (UWO) in Ontario, Canada 🇨🇦</p>
 
   <br>
-  <p class="p-box">I&apos;ve had experience with machine learning pipelines, full stack development, agile project management, and graphic design.</p>
+  <p class="p-box">I&apos;ve had experience with machine learning, full stack development, agile project management, and UI/UX design</p>
 
   <br>
-  <p class="p-box">In my free time, I enjoy playing pool, designing art, listening to music, and hanging out with friends.</p>
+  <p class="p-box">In my free time, I enjoy listening to music, hanging out with friends, going to the gym, and playing pool</p>
 
   <br>
-  <p class="p-box">Feel free to view my team projects & little passion projects below! ↓️ (<span style="color: var(--blue);">blue text</span> below are clickable links)</p>
+  <p class="p-box">Feel free to view my team projects & little passion projects below! ↓️ All <span style="color: var(--blue);">blue text</span> are clickable links</p>
+
 </div>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const intro = document.getElementById('intro-text');
+  const title = document.getElementById('main-title');
+
+  // Add fade-in class to both elements
+  setTimeout(() => {
+    intro.classList.add('fade-in');
+    title.classList.add('fade-in');
+  }, 50); // 50ms delay
+});
+</script>
+
+
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.p-box, .game-card').forEach((box) => {
+    setTimeout(() => {
+      box.classList.add('rise');
+    }, 50);
+  });
+});
+
+</script>
 
 
 
@@ -144,7 +171,7 @@
 <a class="game-card" href="https://github.com/kevin-yang-liu/predict-retirement-contribs" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;">Insurance Predictor</h3>
   <p class="short-desc" style="color: var(--red);">
-  An Elastic Net model predicting household spending on retirement savings. <br><br>
+  An Elastic Net model predicting household spending on retirement savings <br><br>
   <span style="color: var(--purple); text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span>
 </p>
 
@@ -157,7 +184,7 @@
 <a class="game-card" href="https://github.com/kevin-yang-liu/Rasp-Pi-NAS-App" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Raspberry Pi NAS App</h3>
   <p class="short-desc"style="color: var(--red);">
-  A database-backed NAS app for file storage, sorting, and management. <br><br>
+  A database-backed NAS app for file storage, sorting, and management <br><br>
   <span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span>
 </p></p>
   <div class="extra-info">
@@ -169,7 +196,7 @@
 
 <a class="game-card" href="https://github.com/kevin-yang-liu/spotifyplaylistgenerator?tab=readme-ov-file" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Playlist Generator</h3>
-  <p class="short-desc"style="color: var(--red);">An application that generates personalized playlists for users. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <p class="short-desc"style="color: var(--red);">An application that generates personalized playlists for users <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Python, React, Spotify API, OpenAI API, Git</span>
@@ -178,7 +205,7 @@
 
 <a class="game-card" href="https://github.com/kevin-yang-liu/spellchecker" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Spell Checker Website</h3>
-  <p class="short-desc"style="color: var(--red);">A program that provides suggestions and corrections for user's entered words. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <p class="short-desc"style="color: var(--red);">A program that provides suggestions and corrections for user's entered words <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Java, JavaFX, Git, Figma</span>
@@ -187,7 +214,7 @@
 
 <a class="game-card" href="https://github.com/kevin-yang-liu/escapethedungeon" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Escape the <br>Dungeon</h3>
-  <p class="short-desc"style="color: var(--red);">A program that calculates the shortest path to the exit in a dungeon.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
+  <p class="short-desc"style="color: var(--red);">A program that calculates the shortest path to the exit in a dungeon<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see GitHub</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Java, Java Swing, Eclipse</span>
@@ -198,7 +225,7 @@
 
 <a class="game-card" href="https://sizzleclubs.web.app/" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Sizzle Tech <br>Clubs</h3>
-  <p class="short-desc"style="color: var(--red);">A website displaying info about all of UWO's student-run tech clubs. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <p class="short-desc"style="color: var(--red);">A website displaying info about all of UWO's student-run tech clubs <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">HTML, CSS, JS, Firebase</span>
@@ -210,7 +237,7 @@
 
 <a class="game-card" href="https://nice-purity-test.web.app/" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;">Nice Purity <br>Test</h3>
-  <p class="short-desc"style="color: var(--red);">A checklist-style test that tests how nice you are on a scale of 1 to 50. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <p class="short-desc"style="color: var(--red);">A checklist-style test that tests how nice you are on a scale of 1 to 50 <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">HTML, CSS, JS, Firebase</span>
@@ -220,7 +247,7 @@
 
 <a class="game-card" href="https://dinedesignstudio.wixsite.com/juicy-dumpling" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;">Juicy Dumpling Website</h3>
-  <p class="short-desc"style="color: var(--red);">A mock website for Juicy Dumpling, a Shanghai restaurant in Toronto. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
+  <p class="short-desc"style="color: var(--red);">A mock website for Juicy Dumpling, a Shanghai restaurant in Toronto <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see website</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Wix</span>
@@ -230,7 +257,7 @@
 
 <a class="game-card" href="https://k11games.itch.io/dunk-shot" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Dunk Shot <br> Game</h3>
-  <p class="short-desc"style="color: var(--red);">A game with custom physics engine for realistic ball-net collisions. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <p class="short-desc"style="color: var(--red);">A game with custom physics engine for realistic ball-net collisions <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
@@ -239,7 +266,7 @@
 
 <a class="game-card" href="https://k11games.itch.io/sling-drift" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;">Sing Drift <br> Game</h3>
-  <p class="short-desc"style="color: var(--red);">A game with a custom realistic car drifting mechanics and tire tracks.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <p class="short-desc"style="color: var(--red);">A game with a custom realistic car drifting mechanics and tire tracks<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
@@ -248,7 +275,7 @@
 
 <a class="game-card" href="https://k11games.itch.io/drop-the-ball" target="_blank">
   <h3 style="margin-top: 12px; margin-bottom: 12px;"> Drop the Ball <br> Game</h3>
-  <p class="short-desc"style="color: var(--red);">A game with a custom physics engine to create realistic ball collisions.<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <p class="short-desc"style="color: var(--red);">A game with a custom physics engine to create realistic ball collisions<br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Figma, Inkscape, Scratch</span>
@@ -257,7 +284,7 @@
 
 <a class="game-card" href="https://k11games.itch.io/neon-foosball/" target="_blank">
   <h3  style="margin-top: 12px; margin-bottom: 12px;">Neon Foosball Game</h3>
-  <p class="short-desc"style="color: var(--red);">A game with a custom AI opponent playing table foosball against you. <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
+  <p class="short-desc"style="color: var(--red);">A game with a custom AI opponent playing table foosball against you <br><br><span style="color: var(--purple);text-shadow: 0px 2px 0px var(--black);">Click to see game</span></p>
   <div class="extra-info">
   <br>
       <span style="color: var(--red);">Figma, Scratch</span>
@@ -473,8 +500,8 @@
         <br>
         <p>Email: kliu469@uwo.ca</p> <br>
         <p>Phone: (403) 660-3554</p><br>
-        <p>LinkedIn: <a href="https://linkedin.com/in/kevin-yang-liu/">kevin-yang-liu</a></p><br>
         <p>GitHub: <a href="https://github.com/kevin-yang-liu">kevin-yang-liu</a></p><br>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kevin-yang-liu/">kevin-yang-liu</a></p><br>
          <br>
         <br>
         <br>
@@ -521,7 +548,7 @@
     // sound effect
   </script>
   
-  <p style="font-size: 0.7rem; text-align: center; margin-top: 30px; color: var(--yellow);">
+  <p style="font-size: 0.7rem; text-align: center; margin-top: 30px; color: #C217CC;">
     Made in 2025 by Kevin Y. Liu
      <br>
         <br>
