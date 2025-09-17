@@ -68,10 +68,60 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 50);
   });
 });
-
 </script>
 
 
+
+<img id="switching-img" src="imgs/img1.jpg" alt="Description of image" class="bordered-img" width="500">
+<p id="status-text" style="color: var(--green); font-size: 1rem; margin-top: 10px;"></p>
+
+<br><br><br>
+
+<script>
+  const img = document.getElementById("switching-img");
+  const statusText = document.getElementById("status-text");
+
+  const images = [
+    "imgs/img1.jpg", "imgs/img2.jpg", "imgs/img3.jpg", "imgs/img4.jpg",
+    "imgs/img5.jpg", "imgs/img6.jpg", "imgs/img7.jpg", "imgs/img8.jpg",
+    "imgs/img9.jpg", "imgs/img10.jpg", "imgs/img11.jpg"
+  ];
+  
+  let currentIndex = 0;
+  let intervalId;
+  let isPaused = false;
+
+  // Function to switch to the next image
+  function toggleImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    img.src = images[currentIndex];
+  }
+
+  // Start auto-switching
+  function startSlideshow() {
+    intervalId = setInterval(toggleImage, 3000);
+    statusText.textContent = "Click to pause slideshow";
+  }
+
+  // Stop auto-switching
+  function stopSlideshow() {
+    clearInterval(intervalId);
+    statusText.textContent = "Click to resume slideshow";
+  }
+
+  // Toggle pause/unpause on click
+  img.addEventListener("click", () => {
+    if (isPaused) {
+      startSlideshow();
+    } else {
+      stopSlideshow();
+    }
+    isPaused = !isPaused;
+  });
+
+  // Start initially
+  startSlideshow();
+</script>
 
 
 <!--<script>-->
