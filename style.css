@@ -18,10 +18,11 @@
   color: var(--yellow); 
   text-shadow: 
     0 2px 0 var(--red),
-    0 0 5px rgba(0, 0, 0, 0.7);
+    -10px 10px 8px #360030;
   font-weight: bold;
   letter-spacing: 0px;
-font-family: "Press Start 2P", system-ui;
+font-family: "Press Start 2P", system-ui
+
  
 }
 
@@ -85,6 +86,8 @@ font-family: "Press Start 2P", system-ui;
     margin-top: 20px;
 }
 
+
+
 .game-card {
     background: linear-gradient(45deg, #2B0028, #400034);
     
@@ -93,39 +96,62 @@ font-family: "Press Start 2P", system-ui;
     margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 30px;
-
+    text-decoration: none;
     text-align: center;
     transition: 0.2s ease;
     transform-origin: center;
     position: relative;
     overflow: hidden;
-    text-decoration: none;
     color: inherit;
     width: 170px;
     height: 210px;
+    transform: translate(-10px, 10px);
     
-    transition: all 0.2s ease-out, box-shadow 0.2s;
+    transition: transform 0.2s ease-out, background 0.2s ease-out, box-shadow 0.2s;
+
 
     overflow: hidden;
     position: relative;
     align-self: flex-end; /* makes shrinking happen from the top */
     box-shadow: 
-      -1px 1px 0 var(--black),
-      -2px 2px 0 var(--black),
-      -3px 3px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -5px 5px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -7px 7px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -9px 9px 0 var(--black),
-      -10px 10px 0 var(--black);
+      
+      -10px 10px 0 var(--black),
+      0 0px 8px #170015,
+      -10px 10px 8px #170015;
       /*-11px 11px 0 var(--black),*/
       /*-12px 12px 0 var(--black),*/
       /*-13px 13px 0 var(--black);*/
           margin: 0; /* remove any default margin */
     align-self: flex-start; /* makes top edges align perfectly */
 }
+
+/* Add a 3D shine dot in top-right corner */
+.game-card::after {
+    content: "";
+    position: absolute;
+    top: 9px;       /* adjust vertical position */
+    right: 13px;     /* adjust horizontal position */
+    width: 5px;     /* size of the shine dot */
+    height: 5px;
+    background: #FFBAD3;
+    border-radius: 50%;  /* makes it a circle */
+    opacity: 1;        /* slightly transparent for realism */
+    pointer-events: none; /* so it doesn’t interfere with clicks */
+    box-shadow: none;     /* remove any glow or border */
+}
+
+/* Dim the shine dot when hovering the card */
+.game-card:hover::after {
+    background: #FF8FBA;  /* darker/paler color for dim effect */
+    opacity: 0.7;          /* slightly transparent for dimming */
+}
+
+/* This class is added dynamically when page loads */
+.game-card.rise {
+  transform: translate(0, 0); /* final position */
+}
+
+
 
 .game-card:nth-child(1)  { transform: translateZ(0px);    z-index: 12; }
 .game-card:nth-child(2)  { transform: translateZ(-2px);   z-index: 11; }
@@ -225,27 +251,58 @@ font-family: "Press Start 2P", system-ui;
 
 
 
-
 body {
-    font-family: "Montserrat", sans-serif;
-    background-color: var(--black);
-    color: var(--white);
-    padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgb(43, 0, 40) 0 30px,     
-    rgb(30, 0, 40) 30px 60px    
-  );
-  background-size: 200% 100%;
+    background-size: 200% 100%;
   background-position: 0 0;
-  animation: moveStripes 40s linear infinite;
+  
+  background-color: #2B0040; /* dark purple base */
+  background-image: radial-gradient(circle, rgba(214, 51, 132, 0.3) 1px, transparent 4px);
 
-
+  background-size: 50px 50px; /* spacing between dots (~20 rows depending on screen size) */
+  animation: moveDots 20s linear infinite; /* smooth, slow movement */
 }
+
+@keyframes moveDots {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200px -200px; /* move diagonally up-right */
+  }
+}
+
+
+/*body {*/
+  
+    /*background: linear-gradient(150deg, rgba(0,212,255,1) 0%, rgba(9,121,107,1) 0%, rgba(2,0,36,1) 76%);*/
+/*    color: var(--white);*/
+/*    padding: 20px;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    overflow-x: hidden;*/
+/*  background-image: repeating-linear-gradient(*/
+/*    -45deg,*/
+/*    rgb(43, 0, 40) 0 30px,     */
+/*    rgb(30, 0, 40) 30px 60px    */
+/*  );*/
+  /*background-image: repeating-linear-gradient(*/
+  /*  -45deg,*/
+  /*  rgb(43, 0, 40) 0 30px,     */
+  /*  rgb(30, 0, 40) 30px 60px    */
+  /*);*/
+/*  background-size: 200% 100%;*/
+/*  background-position: 0 0;*/
+/*  animation: moveStripes 40s linear infinite;*/
+
+
+/*}*/
 
 @keyframes moveStripes {
   0% {
@@ -270,7 +327,7 @@ body {
 
 
 .header h1 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
     color: var(--yellow);
     letter-spacing: -1px;
@@ -283,7 +340,8 @@ body {
     text-shadow: 
         2px 2px 0 var(--red),
         -2px -2px 0 var(--blue),
-        0 0 0px var(--yellow);
+        0 0 0px var(--yellow),
+        -10px 10px 8px #360030;
        
 }
 
@@ -331,7 +389,7 @@ p strong {
 
 
 #intro-text {
-  height: 600px;             
+  height: 420px;             
 
 }
 
@@ -341,42 +399,89 @@ p strong {
   font-size: 1.0rem !important;   
   
   /*text color*/
-  color: #A6DAFF !important; 
+  color: var(--red) !important; 
   line-height: 1.4 !important;  
+   opacity: 0;
+transition: all 0.2s ease-out, opacity 0.4s ease-out;
+
+  
 }
 
-  .p-box {
-            
-            background: linear-gradient(45deg, #2B0028, #400034);
-            transition: 0.2s ease-out;
-            border-radius: 15px; 
-            padding: 10px 15px; 
-            max-width: 800px; 
-            border: 3px groove var(--blue);
-            text-align: center;
-            margin: auto;
-            box-shadow: 
-      -1px 1px 0 var(--black),
-      -2px 2px 0 var(--black),
-      -3px 3px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -5px 5px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -7px 7px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -9px 9px 0 var(--black),
+
+/* Add this class dynamically or in HTML */
+#intro-text.fade-in p {
+  opacity: 0.8;
+}
+
+#main-title,
+#intro-text {
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+#main-title.fade-in,
+#intro-text.fade-in {
+  opacity: 1;
+}
+
+
+.p-box {
+  background: linear-gradient(45deg, #2B0028, #400034);
+  border-radius: 25px; 
+  padding: 10px 15px; 
+  max-width: 800px; 
+  border: 3px groove var(--blue);
+  text-align: center;
+  margin: auto;
+
+  /* Initial transform: slightly offset */
+  transform: translate(-10px, 10px);
+
+  /* Shadows: the main shadow stays */
+  box-shadow: 
       -10px 10px 0 var(--black),
-       0 0px 50px #170015,
-       -10px 10px 0 #302352;
-  }
-    .p-box:hover {
-      background: linear-gradient(45deg, #2B0028, #2B0028);
-      transform: translate(-10px, 10px);  
-      box-shadow: 
+      0 0 8px #170015,
+      -10px 10px 8px #170015,
+      -10px 10px 0 #302352;
+
+  /* Smooth transition for movement only */
+  transition: transform 0.8s ease-out, background 0.2s ease-out;
+}
+
+
+/* Add a 3D shine dot in top-right corner */
+.p-box::after {
+    content: "";
+    position: absolute;
+    top: 6px;       /* adjust vertical position */
+    right: 11px;     /* adjust horizontal position */
+    width: 5px;     /* size of the shine dot */
+    height: 5px;
+    background: #FFBAD3;
+    border-radius: 50%;  /* makes it a circle */
+    opacity: 1;        /* slightly transparent for realism */
+    pointer-events: none; /* so it doesn’t interfere with clicks */
+    box-shadow: none;     /* remove any glow or border */
+}
+
+/* Dim the shine dot when hovering the card */
+.p-box:hover::after {
+    background: #FF8FBA;  /* darker/paler color for dim effect */
+    opacity: 0.7;          /* slightly transparent for dimming */
+}
+
+
+/* This class is added dynamically when page loads */
+.p-box.rise {
+  transform: translate(0, 0); /* final position */
+}
+
+.p-box:hover {
+  background: linear-gradient(45deg, #2B0028, #2B0028);
+  transform: translate(-10px, 10px);  
+  box-shadow: 
       -1px 1px 0 var(--black);
-  
-        
-  }
+}
 
 
 
@@ -403,7 +508,9 @@ p strong {
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
        box-shadow: 
       
-      -4px 4px 0 var(--black);
+      -4px 4px 0 var(--black),
+      0 0px 8px #170015,
+      -4px 4px 8px #170015;
 }
 
 
@@ -418,6 +525,22 @@ p strong {
     animation: gradientShift 10s ease infinite;
     border-radius: 12px;
 }
+
+/* Add a 3D shine dot in top-right corner */
+.nav-container::after {
+    content: "";
+    position: absolute;
+    top: 10px;       /* adjust vertical position */
+    right: 15px;     /* adjust horizontal position */
+    width: 5px;     /* size of the shine dot */
+    height: 5px;
+    background: white;
+    border-radius: 50%;  /* makes it a circle */
+    opacity: 1;        /* slightly transparent for realism */
+    pointer-events: none; /* so it doesn’t interfere with clicks */
+    box-shadow: none;     /* remove any glow or border */
+}
+
 
 .nav-container:hover {
     transform: translateX(-5px) translateY(5px);
