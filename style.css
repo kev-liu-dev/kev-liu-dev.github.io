@@ -1,39 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
-
-
-/*li {*/
-/*  margin-top: 10px; */
-/*}*/
-
-
 #content-area {
   text-align: center; 
 }
 
-/* projects title text */
 #content-area h2 { 
   font-size: 1rem;
   color: var(--yellow); 
-  text-shadow: 
-    0 2px 0 var(--red),
-    -10px 10px 8px #360030;
+  text-shadow: 0 2px 0 var(--red), -10px 10px 8px #360030;
   font-weight: bold;
   letter-spacing: 0px;
-font-family: "Press Start 2P", system-ui
-
- 
+  font-family: "Press Start 2P", system-ui;
 }
 
 #content-area p {
   text-align: center;
-
+  font-size: 1rem;       
+  color: var(--green);     
+  margin: 5px 0;          
+  line-height: 1.4;       
 }
 
-
-
-/* Projects experiences and achievements sections */
 #content-area ul {
   font-size: 1rem;     
   color: var(--green);   
@@ -41,117 +28,70 @@ font-family: "Press Start 2P", system-ui
   line-height: 1.4;       
 }
 
-#content-area ul a {
-  color: var(--purple);    
-  text-decoration: none;
-}
-.k11-link {
-  color: var(--purple);    
-  text-decoration: none;   
-}
-
-.k11-link:hover {
-  text-decoration: underline; 
-}
-
-
-#content-area ul a:hover {
-  text-decoration: underline; 
-}
-
-/* Skills and contact sections */
-#content-area p {
-  font-size: 1rem;       
-  color: var(--green);     
-  margin: 5px 0;          
-  line-height: 1.4;       
-}
-
-
-
-/* Style links inside the <p> */
+#content-area ul a,
+.k11-link,
 #content-area p a {
   color: var(--purple);    
   text-decoration: none;
 }
 
+.k11-link:hover,
+#content-area ul a:hover,
 #content-area p a:hover {
   text-decoration: underline; 
 }
 
 .game-preview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
-
-
 
 .game-card {
-    background: linear-gradient(45deg, #2B0028, #400034);
-    
-    border: 3px groove var(--darkpurple);
-    padding: 10px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 30px;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.2s ease;
-    transform-origin: center;
-    position: relative;
-    overflow: hidden;
-    color: inherit;
-    width: 170px;
-    height: 210px;
-    transform: translate(-10px, 10px);
-    
-    transition: transform 0.2s ease-out, background 0.2s ease-out, box-shadow 0.2s;
-
-
-    overflow: hidden;
-    position: relative;
-    align-self: flex-end; /* makes shrinking happen from the top */
-    box-shadow: 
-      
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
-      /*-11px 11px 0 var(--black),*/
-      /*-12px 12px 0 var(--black),*/
-      /*-13px 13px 0 var(--black);*/
-          margin: 0; /* remove any default margin */
-    align-self: flex-start; /* makes top edges align perfectly */
+  background: linear-gradient(45deg, #2B0028, #400034);
+  border: 3px groove var(--darkpurple);
+  padding: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease-out, background 0.2s ease-out, box-shadow 0.2s;
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+  color: inherit;
+  width: 170px;
+  height: 210px;
+  transform: translate(-10px, 10px);
+  align-self: flex-start;
+  box-shadow: -10px 10px 0 var(--black), 0 0px 8px #170015, -10px 10px 8px #170015;
+  margin: 0;
 }
 
-/* Add a 3D shine dot in top-right corner */
 .game-card::after {
-    content: "";
-    position: absolute;
-    top: 9px;       /* adjust vertical position */
-    right: 13px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
-    height: 5px;
-    background: #FFBAD3;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  width: 5px;
+  height: 5px;
+  background: #FFBAD3;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+  box-shadow: none;
 }
 
-/* Dim the shine dot when hovering the card */
 .game-card:hover::after {
-    background: #FF8FBA;  /* darker/paler color for dim effect */
-    opacity: 0.7;          /* slightly transparent for dimming */
+  background: #FF8FBA;
+  opacity: 0.7;
 }
 
-/* This class is added dynamically when page loads */
 .game-card.rise {
-  transform: translate(0, 0); /* final position */
+  transform: translate(0, 0);
 }
-
-
 
 .game-card:nth-child(1)  { transform: translateZ(0px);    z-index: 12; }
 .game-card:nth-child(2)  { transform: translateZ(-2px);   z-index: 11; }
@@ -168,247 +108,137 @@ font-family: "Press Start 2P", system-ui
 
 .game-card:hover {
   background: linear-gradient(45deg, #2B0028, #2B0028);
-    /*height: 170px; */
-    /*box-shadow: 0 0px 70px rgba(0, 0, 0, 1);*/
-    /*border-radius: 30px 30px 0 0;*/
-    transform: translate(-10px, 10px);  
-    /*background: linear-gradient(45deg, #380033, #380033);*/
-      box-shadow: 
-      -1px 1px 0 var(--black),
-     
-  
+  transform: translate(-10px, 10px);
+  box-shadow: -1px 1px 0 var(--black);
 }
 
-
-
-
-
-
-/* Project title */
 .game-card h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: var(--yellow);
-      text-shadow: 
-    0 2px 0 var(--red);
-    
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--yellow);
+  text-shadow: 0 2px 0 var(--red);
 }
 
 .game-card .short-desc {
-    font-size: 0.8rem;
-    color: var(--white);
-    text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--white);
+  text-decoration: none;
 }
 
 .game-card .extra-info {
-    display: none;
-    font-size: 0.8rem;
-    color: var(--green);
-    margin-top: 5px;
-    line-height: 1.3;
+  display: none;
+  font-size: 0.8rem;
+  color: var(--green);
+  margin-top: 5px;
+  line-height: 1.3;
 }
 
 .game-card:hover .short-desc {
-    display: none; 
+  display: none; 
 }
 
 .game-card:hover .extra-info {
-    display: block; 
+  display: block; 
 }
-
-#content-area .game-card h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: var(--yellow);
-}
-
-#content-area .game-card p {
-    font-size: 0.8rem;
-    color: var(--white);
-}
-
 
 :root {
-    --black: #4A0F59;
-    --white: #f8f8f8;
-    --yellow: #ffbc42;
-    --red: #FA1E6C;
-    --blue: #0496ff;
-    --darkblue: #008aed;
-    /*dark dark purple not actually green now*/
-    --green: #C218CC; 
-    --purple: #6578F0;
-    --darkpurple: #4158EC;
+  --black: #4A0F59;
+  --white: #f8f8f8;
+  --yellow: #ffbc42;
+  --red: #FA1E6C;
+  --blue: #0496ff;
+  --darkblue: #008aed;
+  --green: #C218CC; 
+  --purple: #6578F0;
+  --darkpurple: #4158EC;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-/*font-family: "Press Start 2P", system-ui;*/
-
-
 
 body {
   font-family: "Montserrat", sans-serif;
   padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-size: 200% 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-size: 200% 100%;
   background-position: 0 0;
-  
-  background-color: #2B0040; /* dark purple base */
+  background-color: #2B0040;
   background-image: radial-gradient(circle, rgba(214, 51, 132, 0.3) 1px, transparent 4px);
-
-  background-size: 50px 50px; /* spacing between dots (~20 rows depending on screen size) */
-  animation: moveDots 20s linear infinite; /* smooth, slow movement */
+  background-size: 50px 50px;
+  animation: moveDots 20s linear infinite;
 }
 
 @keyframes moveDots {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 200px -200px; /* move diagonally up-right */
-  }
+  from { background-position: 0 0; }
+  to { background-position: 200px -200px; }
 }
-
-
-/*body {*/
-  
-    /*background: linear-gradient(150deg, rgba(0,212,255,1) 0%, rgba(9,121,107,1) 0%, rgba(2,0,36,1) 76%);*/
-/*    color: var(--white);*/
-/*    padding: 20px;*/
-/*    height: 100vh;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    overflow-x: hidden;*/
-/*  background-image: repeating-linear-gradient(*/
-/*    -45deg,*/
-/*    rgb(43, 0, 40) 0 30px,     */
-/*    rgb(30, 0, 40) 30px 60px    */
-/*  );*/
-  /*background-image: repeating-linear-gradient(*/
-  /*  -45deg,*/
-  /*  rgb(43, 0, 40) 0 30px,     */
-  /*  rgb(30, 0, 40) 30px 60px    */
-  /*);*/
-/*  background-size: 200% 100%;*/
-/*  background-position: 0 0;*/
-/*  animation: moveStripes 40s linear infinite;*/
-
-
-/*}*/
-
-@keyframes moveStripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -400px 0; 
-  }
-}
-
-
 
 .container {
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-
-
-
 .header h1 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--yellow);
-    letter-spacing: -1px;
-    text-align: center;
-    position: relative;
-    font-family: "Press Start 2P", system-ui;
-
-    animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate;
-
-    text-shadow: 
-        2px 2px 0 var(--red),
-        -2px -2px 0 var(--blue),
-        0 0 0px var(--yellow),
-        -10px 10px 8px #360030;
-       
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--yellow);
+  letter-spacing: -1px;
+  text-align: center;
+  position: relative;
+  font-family: "Press Start 2P", system-ui;
+  animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate;
+  text-shadow: 2px 2px 0 var(--red), -2px -2px 0 var(--blue), 0 0 0px var(--yellow), -10px 10px 8px #360030;
 }
 
 @keyframes floatText {
-    0% { top: 0px; }
-    50% { top: -7px; }  
-    100% { top: 0px; }
+  0% { top: 0px; }
+  50% { top: -7px; }  
+  100% { top: 0px; }
 }
-
 
 @keyframes scanlines {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 100%; }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
 }
-
-
-
-/*machine learning intern... text*/
 
 p strong {
-  
-   font-family: "Montserrat", sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .header p {
-    font-size: 0.7rem;
-    line-height: 1.5;
-    color: var(--white);
-    max-width: 80%;
-    margin: 0 auto;
-    
-  
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--white);
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-
-/*3d text effect in the header description*/
 .header {
- text-align: center;
- text-shadow: 
-        -1px 1px 0 #6E0A73;
- 
+  text-align: center;
+  text-shadow: -1px 1px 0 #6E0A73;
 }
-
 
 #intro-text {
   height: 420px;             
-
 }
-
 
 #intro-text p {
   text-align: center;
-  font-size: 1.0rem !important;   
-  
-  /*text color*/
+  font-size: 1.0rem !important;
   color: var(--red) !important; 
   line-height: 1.4 !important;  
-   opacity: 0;
-transition: all 0.2s ease-out, opacity 0.4s ease-out;
-
-  
+  opacity: 0;
+  transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
-
-/* Add this class dynamically or in HTML */
 #intro-text.fade-in p {
   opacity: 0.8;
 }
@@ -424,7 +254,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   opacity: 1;
 }
 
-
 .p-box {
   background: linear-gradient(45deg, #2B0028, #400034);
   border-radius: 25px; 
@@ -433,136 +262,87 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   border: 3px groove var(--blue);
   text-align: center;
   margin: auto;
-
-  /* Initial transform: slightly offset */
   transform: translate(-10px, 10px);
-
-  /* Shadows: the main shadow stays */
-  box-shadow: 
-      -10px 10px 0 var(--black),
-      0 0 8px #170015,
-      -10px 10px 8px #170015,
-      -10px 10px 0 #302352;
-
-  /* Smooth transition for movement only */
+  box-shadow: -10px 10px 0 var(--black), 0 0 8px #170015, -10px 10px 8px #170015, -10px 10px 0 #302352;
   transition: transform 0.8s ease-out, background 0.2s ease-out;
 }
 
-
-/* Add a 3D shine dot in top-right corner */
 .p-box::after {
-    content: "";
-    position: absolute;
-    top: 6px;       /* adjust vertical position */
-    right: 11px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
-    height: 5px;
-    background: #FFBAD3;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 11px;
+  width: 5px;
+  height: 5px;
+  background: #FFBAD3;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+  box-shadow: none;
 }
 
-/* Dim the shine dot when hovering the card */
 .p-box:hover::after {
-    background: #FF8FBA;  /* darker/paler color for dim effect */
-    opacity: 0.7;          /* slightly transparent for dimming */
+  background: #FF8FBA;
+  opacity: 0.7;
 }
 
-
-/* This class is added dynamically when page loads */
 .p-box.rise {
-  transform: translate(0, 0); /* final position */
+  transform: translate(0, 0);
 }
 
 .p-box:hover {
   background: linear-gradient(45deg, #2B0028, #2B0028);
   transform: translate(-10px, 10px);  
-  box-shadow: 
-      -1px 1px 0 var(--black);
+  box-shadow: -1px 1px 0 var(--black);
 }
 
-
-
-
-/*the container outside nav bar */
 .nav-container {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    /*the color gradient thing that i delete*/
-    /*background-color: var(--black);*/
-    /*border: 3px solid var(--purple);*/
-    /*padding: 5px;*/
-    /*margin-bottom: 30px;*/
-    /*animation: gradientShift 10s ease infinite;*/
-    /*box-shadow: 0 0 0 5px var(--black), */
-    /*            0 0 0 10px var(--purple),*/
-    /*            10px 10px 0 0 rgba(0,0,0,0.5);*/
-    overflow: hidden;
-    border-radius: 20px;
-
-    /* Add transition here on base element */
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    box-shadow: 0 0px 50px rgba(0, 0, 0,1);
-       box-shadow: 
-      
-      -4px 4px 0 var(--black),
-      0 0px 8px #170015,
-      -4px 4px 8px #170015;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  box-shadow: -4px 4px 0 var(--black), 0 0px 8px #170015, -4px 4px 8px #170015;
 }
-
 
 .nav-container::before {
-    content: '';
-    position: absolute;
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(270deg, #ffbc42, #8067b7, #0496ff, #d81159);
-    background-size: 800% 800%;
-    z-index: -1;
-    filter: blur(6px);
-    animation: gradientShift 10s ease infinite;
-    border-radius: 12px;
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(270deg, #ffbc42, #8067b7, #0496ff, #d81159);
+  background-size: 800% 800%;
+  z-index: -1;
+  filter: blur(6px);
+  animation: gradientShift 10s ease infinite;
+  border-radius: 12px;
 }
 
-/* Add a 3D shine dot in top-right corner */
 .nav-container::after {
-    content: "";
-    position: absolute;
-    top: 10px;       /* adjust vertical position */
-    right: 15px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
-    height: 5px;
-    background: white;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
+  box-shadow: none;
 }
-
 
 .nav-container:hover {
-    transform: translateX(-5px) translateY(5px);
-    box-shadow: 0 0px 50px rgba(0, 0, 0,1);
-       box-shadow: 
-      
-      -0px 0px 0 var(--black);
-    
-    /*box-shadow: 0 0 10px rgba(172,151,230, 0.2),*/
-    /*            0 10px 20px rgba(0,0,0,0);*/
-                
+  transform: translateX(-5px) translateY(5px);
+  box-shadow: -0px 0px 0 var(--black);
 }
 
-/* Gradient animation */
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-
-/* coin flip animation */
 .flip-wrapper {
   display: flex;
   justify-content: center;
@@ -582,7 +362,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   transform-style: preserve-3d;
   border-radius: 50%;
   animation: autoFlip 10s infinite; 
-  
   box-shadow: 0 0px 7px var(--yellow), 0 0px 20px #170015;
 }
 
@@ -602,151 +381,102 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   transform: rotateY(180deg);
 }
 
-
 @keyframes autoFlip {
-  0%, 45% {
-    transform: rotateY(0deg);
-  }
-  50%, 95% {
-    transform: rotateY(180deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
+  0%, 45% { transform: rotateY(0deg); }
+  50%, 95% { transform: rotateY(180deg); }
+  100% { transform: rotateY(0deg); }
 }
-
-
-
 
 .nav-bar {
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-
-   background: repeating-linear-gradient(
-    -45deg,
-    var(--purple),
-    var(--purple) 60px,
-    var(--darkpurple) 60px,
-    var(--darkpurple) 120px
-    
-);
-
-    background-size: 200% 100%;
-    animation: moveStripes 15s linear infinite;
-
-/*the rectangle ourline thats innermost in the navbar */
-    border: 7px solid var(--black);
-    border-radius: 20px; 
-    position: relative;
-    overflow: hidden;
-    
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  background: repeating-linear-gradient(-45deg, var(--purple), var(--purple) 60px, var(--darkpurple) 60px, var(--darkpurple) 120px);
+  background-size: 200% 100%;
+  animation: moveStripes 15s linear infinite;
+  border: 7px solid var(--black);
+  border-radius: 20px; 
+  position: relative;
+  overflow: hidden;
 }
-
 
 @keyframes moveStripes {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 200% 0;
-    }
+  from { background-position: 0 0; }
+  to { background-position: 200% 0; }
 }
-
-
-
 
 .nav-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    /*the little light highlight line at the top of the nav bar */
-    height: 4.85px;
-    background: rgba(255, 255, 255, 0.2);
-    /*animation: scanline 5s ease-out infinite;*/
-    z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.85px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
-
-
 
 .nav-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8px 5px;
-    text-decoration: none;
-    color: var(--white);
-    /*projects experience tabs...*/
-    font-size: 1.3rem;
-    transition: all 0.1s ease;
-    cursor: pointer;
-    z-index: 2;
-    text-shadow: 
-      0 2px 0 rgba(65, 7, 66, 0.5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 5px;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.3rem;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  z-index: 2;
+  text-shadow: 0 2px 0 rgba(65, 7, 66, 0.5);
 }
 
-/*when hovered over a nav bar word like projects */
 .nav-item:hover {
-    transform: scale(1.0); 
-    color: var(--yellow);
-    background-color: rgba(48, 35, 82, 0.2); 
-    border-radius: 0 0 8px 8px;
-    padding: 4px 10px; 
-    text-shadow: 
-      0 3px 0 rgba(65, 7, 66, 0.5);
+  transform: scale(1.0); 
+  color: var(--yellow);
+  background-color: rgba(48, 35, 82, 0.2); 
+  border-radius: 0 0 8px 8px;
+  padding: 4px 10px; 
+  text-shadow: 0 3px 0 rgba(65, 7, 66, 0.5);
 }
 
-/*rectangle behind nav bar words like projects */
 .nav-item.active {
-    background-color: rgba(248, 248, 248, 0.2); 
-    border-radius: 0 0 8px 8px;
-    color: var(--yellow);
+  background-color: rgba(248, 248, 248, 0.2); 
+  border-radius: 0 0 8px 8px;
+  color: var(--yellow);
 }
-
-
 
 .crt-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-    background-size: 100% 4px;
-    z-index: 100;
-    opacity: 0.15;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 100;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 .crt-flicker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    animation: flicker 0.3s infinite alternate;
-    pointer-events: none;
-    z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: flicker 0.3s infinite alternate;
+  pointer-events: none;
+  z-index: 101;
 }
-
-/* Animations */
-@keyframes scanline {
-  0%   { top: 0; }
-  20%  { top: 100%; }   
-  100% { top: 100%; }   
-}
-
 
 @keyframes flicker {
-    0% { opacity: 0.1; }
-    100% { opacity: 0; }
-  
+  0% { opacity: 0.1; }
+  100% { opacity: 0; }
+}
