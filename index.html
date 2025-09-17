@@ -50,11 +50,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const intro = document.getElementById('intro-text');
   const title = document.getElementById('main-title');
 
-  // Add fade-in class to both elements
   setTimeout(() => {
     intro.classList.add('fade-in');
     title.classList.add('fade-in');
-  }, 50); // 50ms delay
+  }, 50); 
 });
 </script>
 
@@ -146,7 +145,6 @@ window.addEventListener('DOMContentLoaded', () => {
       </nav>
     </div>
 
-    <!-- Content area -->
     <div id="content-area"></div>
     
   </div>
@@ -530,10 +528,8 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // Default load
     contentArea.innerHTML = pages.projects;
 
-    // Handle nav clicks
     navItems.forEach(item => {
       item.addEventListener("click", () => {
         navItems.forEach(i => i.classList.remove("active"));
@@ -545,7 +541,6 @@ window.addEventListener('DOMContentLoaded', () => {
     
     
     
-    // sound effect
   </script>
   
   <p style="font-size: 0.7rem; text-align: center; margin-top: 30px; color: #C217CC;">
@@ -558,14 +553,10 @@ window.addEventListener('DOMContentLoaded', () => {
   
   
   
-  <!-- sound effect -->
 <audio id="hover-sound" src="coin.mp3" preload="auto"></audio>
-
-<!-- JS for hover sound -->
 <script>
   const hoverSound = document.getElementById("hover-sound");
 
-  // select both game cards and nav items
   document.querySelectorAll(".game-card, .nav-item").forEach(item => {
     item.addEventListener("mouseenter", () => {
       hoverSound.currentTime = 0;
