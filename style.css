@@ -614,7 +614,7 @@ box-shadow:
   border-radius: 50%;
   animation: autoFlip 10s infinite; 
   
-  box-shadow: 0 0px 7px var(--yellow), 0 0px 20px #170015;
+  box-shadow: 0 0px 10px var(--yellow), 0 0px 50px #170015;
 }
 
 .flip-card img {
