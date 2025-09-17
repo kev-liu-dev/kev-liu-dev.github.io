@@ -8,6 +8,7 @@
 /*}*/
 
 
+
 #content-area {
   text-align: center; 
 }
@@ -33,7 +34,7 @@ font-family: "Press Start 2P", system-ui
 
 
 
-/* Projects experiences and achievements sections */
+/* projects experiences and achievements sections */
 #content-area ul {
   font-size: 1rem;     
   color: var(--green);   
@@ -464,7 +465,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 
 
-  transform: translate(0, 0); /* final position */
+  transform: translate(0, 0); 
 }
 
 .p-box:hover {
@@ -543,7 +544,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
                 
 }
 
-/* Gradient animation */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -551,7 +551,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
-/* coin flip animation */
 .flip-wrapper {
   display: flex;
   justify-content: center;
@@ -727,12 +726,11 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     z-index: 101;
 }
 
-/* Animations */
-@keyframes scanline {
-  0%   { top: 0; }
-  20%  { top: 100%; }   
-  100% { top: 100%; }   
-}
+/*@keyframes scanline {*/
+/*  0%   { top: 0; }*/
+/*  20%  { top: 100%; }   */
+/*  100% { top: 100%; }   */
+/*}*/
 
 
 @keyframes flicker {
