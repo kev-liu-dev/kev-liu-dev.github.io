@@ -59,7 +59,6 @@ font-family: "Press Start 2P", system-ui
   text-decoration: underline; 
 }
 
-/* Skills and contact sections */
 #content-area p {
   font-size: 1rem;       
   color: var(--green);     
@@ -69,7 +68,6 @@ font-family: "Press Start 2P", system-ui
 
 
 
-/* Style links inside the <p> */
 #content-area p a {
   color: var(--purple);    
   text-decoration: none;
@@ -112,7 +110,7 @@ font-family: "Press Start 2P", system-ui
 
     overflow: hidden;
     position: relative;
-    align-self: flex-end; /* makes shrinking happen from the top */
+    align-self: flex-end; 
     box-shadow: 
       
       -10px 10px 0 var(--black),
@@ -121,34 +119,31 @@ font-family: "Press Start 2P", system-ui
       /*-11px 11px 0 var(--black),*/
       /*-12px 12px 0 var(--black),*/
       /*-13px 13px 0 var(--black);*/
-          margin: 0; /* remove any default margin */
-    align-self: flex-start; /* makes top edges align perfectly */
+          margin: 0;
+    align-self: flex-start;
 }
 
-/* Add a 3D shine dot in top-right corner */
 .game-card::after {
     content: "";
     position: absolute;
-    top: 9px;       /* adjust vertical position */
-    right: 13px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
+    top: 9px;    
+    right: 13px;  
+    width: 5px; 
     height: 5px;
     background: #FFBAD3;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+    border-radius: 50%; 
+    opacity: 1;     
+    pointer-events: none;
+    box-shadow: none;   
 }
 
-/* Dim the shine dot when hovering the card */
 .game-card:hover::after {
-    background: #FF8FBA;  /* darker/paler color for dim effect */
-    opacity: 0.7;          /* slightly transparent for dimming */
+    background: #FF8FBA;
+    opacity: 0.7;       
 }
 
-/* This class is added dynamically when page loads */
 .game-card.rise {
-  transform: translate(0, 0); /* final position */
+  transform: translate(0, 0); 
 }
 
 
@@ -261,11 +256,11 @@ body {
     background-size: 200% 100%;
   background-position: 0 0;
   
-  background-color: #2B0040; /* dark purple base */
+  background-color: #2B0040;
   background-image: radial-gradient(circle, rgba(214, 51, 132, 0.3) 1px, transparent 4px);
 
-  background-size: 50px 50px; /* spacing between dots (~20 rows depending on screen size) */
-  animation: moveDots 20s linear infinite; /* smooth, slow movement */
+  background-size: 50px 50px; 
+  animation: moveDots 20s linear infinite; /
 }
 
 @keyframes moveDots {
@@ -273,7 +268,7 @@ body {
     background-position: 0 0;
   }
   to {
-    background-position: 200px -200px; /* move diagonally up-right */
+    background-position: 200px -200px; /
   }
 }
 
@@ -379,7 +374,6 @@ p strong {
 }
 
 
-/*3d text effect in the header description*/
 .header {
  text-align: center;
  text-shadow: 
@@ -408,7 +402,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
-/* Add this class dynamically or in HTML */
 #intro-text.fade-in p {
   opacity: 0.8;
 }
@@ -434,45 +427,43 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   text-align: center;
   margin: auto;
 
-  /* Initial transform: slightly offset */
   transform: translate(-10px, 10px);
 
-  /* Shadows: the main shadow stays */
+  
   box-shadow: 
       -10px 10px 0 var(--black),
       0 0 8px #170015,
       -10px 10px 8px #170015,
       -10px 10px 0 #302352;
 
-  /* Smooth transition for movement only */
+  
   transition: transform 0.8s ease-out, background 0.2s ease-out;
 }
 
 
-/* Add a 3D shine dot in top-right corner */
+
 .p-box::after {
     content: "";
     position: absolute;
-    top: 6px;       /* adjust vertical position */
-    right: 11px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
+    top: 6px;      
+    right: 11px;   
+    width: 5px;     
     height: 5px;
     background: #FFBAD3;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+    border-radius: 50%;  
+    opacity: 1;        
+    pointer-events: none; 
+    box-shadow: none;     
 }
 
-/* Dim the shine dot when hovering the card */
+
 .p-box:hover::after {
-    background: #FF8FBA;  /* darker/paler color for dim effect */
-    opacity: 0.7;          /* slightly transparent for dimming */
+    background: #FF8FBA;  
+    opacity: 0.7;          
 }
 
 
-/* This class is added dynamically when page loads */
-.p-box.rise {
+
   transform: translate(0, 0); /* final position */
 }
 
@@ -503,7 +494,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     overflow: hidden;
     border-radius: 20px;
 
-    /* Add transition here on base element */
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
        box-shadow: 
@@ -526,19 +516,18 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     border-radius: 12px;
 }
 
-/* Add a 3D shine dot in top-right corner */
 .nav-container::after {
     content: "";
     position: absolute;
-    top: 10px;       /* adjust vertical position */
-    right: 15px;     /* adjust horizontal position */
-    width: 5px;     /* size of the shine dot */
+    top: 10px;      
+    right: 15px;    
+    width: 5px;     
     height: 5px;
     background: white;
-    border-radius: 50%;  /* makes it a circle */
-    opacity: 1;        /* slightly transparent for realism */
-    pointer-events: none; /* so it doesn’t interfere with clicks */
-    box-shadow: none;     /* remove any glow or border */
+    border-radius: 50%;
+    opacity: 1;       
+    pointer-events: none; 
+    box-shadow: none;     
 }
 
 
