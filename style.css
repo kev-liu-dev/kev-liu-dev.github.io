@@ -33,6 +33,46 @@ font-family: "Press Start 2P", system-ui
 
 
 
+.bordered-img {
+  border: 10px solid blue;
+  border-radius: 10px; 
+  transition: 0.2s ease-out;
+  border: 3px groove var(--darkpurple);
+    width: 400px;    
+  height: 230px;     
+  object-fit: cover;  
+  object-position: center; 
+  border: 2px solid blue;  
+  border-radius: 6px;     
+    
+    
+
+
+    box-shadow: 
+      -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
+      -10px 10px 0 var(--black),
+      0 0px 8px #170015,
+      -10px 10px 8px #170015;
+}
+
+.status-text{
+ margin-top: 50px;
+}
+
+
+
+.bordered-img:hover {
+  background: linear-gradient(45deg, #2B0028, #2B0028);
+  transform: translate(-10px, 10px);  
+  box-shadow: 
+      -1px 1px 0 var(--black);
+}
+
+
+
 /*projects experiences and achievements sections */
 #content-area ul {
   font-size: 1rem;     
@@ -130,6 +170,10 @@ font-family: "Press Start 2P", system-ui
     align-self: flex-end; 
     box-shadow: 
       
+     -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
       -10px 10px 0 var(--black),
       0 0px 8px #170015,
       -10px 10px 8px #170015;
@@ -465,6 +509,10 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 box-shadow: 
       
+      -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
       -10px 10px 0 var(--black),
       0 0px 8px #170015,
       -10px 10px 8px #170015;
