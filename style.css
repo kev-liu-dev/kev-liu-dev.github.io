@@ -444,7 +444,7 @@ p strong {
 
 
 #intro-text {
-  height: 420px;             
+  height: 140px;             
 
 }
 
@@ -456,7 +456,7 @@ p strong {
   /*text color*/
   color: #FFFFFF !important; 
   line-height: 1.4 !important;  
-   opacity: 0;
+   opacity: 0.1;
 transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
   
@@ -464,12 +464,12 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 
 #intro-text.fade-in p {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 #main-title,
 #intro-text {
-  opacity: 0;
+  opacity: 0.4;
   transition: opacity 2s ease-out;
 }
 
@@ -497,6 +497,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 .p-box {
   background: linear-gradient(45deg, #2B0028, #4F003E);
+  color: white !important;
   border-radius: 25px; 
   padding: 10px 15px; 
   max-width: 800px; 
@@ -551,6 +552,89 @@ box-shadow:
   box-shadow: 
       -1px 1px 0 var(--black);
 }
+
+
+
+
+
+
+
+
+
+
+#content-area .p-box2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*the little light highlight line at the top of the nav bar */
+    height: 4.85px;
+    background: rgba(255, 255, 255, 0.1);
+    /*animation: scanline 5s ease-out infinite;*/
+    z-index: 1;
+}
+
+
+#content-area .p-box2 {
+  background: linear-gradient(45deg, #2B0028, #4F003E);
+  color: white !important;
+  border-radius: 25px; 
+  padding: 10px 15px; 
+  max-width: 800px; 
+  border: 3px groove var(--blue);
+  text-align: center;
+  margin: auto;
+  opacity: 0.85;
+  
+
+  /* Initial transform: slightly offset */
+  /*transform: translate(-10px, 10px);*/
+
+box-shadow: 
+      
+      -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
+      -10px 10px 0 var(--black),
+      0 0px 8px #170015,
+      -10px 10px 8px #170015;
+
+  transition: all 0.2s ease-out, opacity 0.4s ease-out;
+}
+
+
+#content-area .p-box2::after {
+    content: "";
+    position: absolute;
+    top: 6px;       
+    right: 11px;    
+    width: 5px;     
+    height: 5px;
+    background: #FFBAD3;
+    border-radius: 50%; 
+    opacity: 1;     
+    pointer-events: none; 
+    box-shadow: none;    
+}
+
+#content-area .p-box2:hover::after {
+    background: #FF8FBA;  
+    opacity: 0.7;         
+}
+
+#content-area .p-box2:hover {
+  background: linear-gradient(45deg, #2B0028, #2B0028);
+  transform: translate(-10px, 10px);  
+  box-shadow: 
+      -1px 1px 0 var(--black);
+}
+
+
+
+
+
 
 
 
@@ -750,7 +834,7 @@ box-shadow:
     text-decoration: none;
     color: var(--white);
     /*projects experience tabs...*/
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: all 0.1s ease;
     cursor: pointer;
     z-index: 2;
