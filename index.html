@@ -35,15 +35,7 @@
 <div id="intro-text">
   <p class="p-box"> Hey! I&apos;m a final-year Computer Science specialized undergrad student at Western University (UWO) in Ontario, Canada 🇨🇦</p>
 
-  <br>
-  <p class="p-box">I&apos;ve had experience with machine learning, full stack development, agile project management, and UI/UX design</p>
-
-  <br>
-  <p class="p-box">In my free time, I enjoy listening to music, hanging out with friends, going to the gym, and playing pool</p>
-
-  <br>
-  <p class="p-box">Feel free to view my team projects & passion projects below! ↓</p>
-
+ 
 </div>
 
 <script>
@@ -84,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const images = [
     "imgs/img1.jpg", "imgs/img2.jpg", "imgs/img3.jpg", "imgs/img4.jpg",
     "imgs/img5.jpg", "imgs/img6.jpg", "imgs/img7.jpg", "imgs/img8.jpg",
-    "imgs/img9.jpg", "imgs/img10.jpg", "imgs/img11.jpg"
+    "imgs/img9.jpg", "imgs/img10.jpg", "imgs/img11.jpg", "imgs/img12.jpg", "imgs/img13.jpg"
   ];
   
   let currentIndex = 0;
@@ -183,11 +175,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     <div class="nav-container">
       <nav class="nav-bar">
+      <a class="nav-item" data-page="aboutme"><strong>About Me</strong></a>
        <a class="nav-item active" data-page="projects"><strong>Projects</strong></a>
 <a class="nav-item" data-page="experiences"><strong>Experiences</strong></a>
 <a class="nav-item" data-page="skills"><strong>Skills</strong></a>
-<a class="nav-item" data-page="achievements"><strong>Certificates</strong></a>
+<a class="nav-item" data-page="achievements"><strong>Achievements</strong></a>
 <a class="nav-item" data-page="contact"><strong>Contact</strong></a>
+
 
         
       </nav>
@@ -203,6 +197,43 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Portfolio content
     const pages = {
+      aboutme: `
+         
+          <br><br><h2>About Me</h2><br><br>
+ <p class="p-box2">
+I was born in Toronto but moved around a lot when I was young, including living in Vancouver and Tianjin. I did Grade 1 in Tianjin before coming back to Canada, where I spent Grade 2 through Grade 12 in Calgary.
+</p>
+
+  <br>
+  <p class="p-box2">I’ve loved drawing for as long as I can remember. Many of my family members are artists, so I started pencil <a href="https://www.instagram.com/kevinarttt/" target="_blank">sketching</a> realistic images from the internet, mostly cars, nature, and video game characters like Super Mario, when I was around eight. Every summer of my childhood, I would go back to Tianjin and practice Chinese calligraphy with my grandpa. Back in Canada, I went to Webber Academy for middle and high school, and on the weekends I went to multiple art schools, such oil painting school every Saturday throughout middle and high school, where <a href="https://www.swintonsart.com/art-teachers/sue-contini" target="_blank">Sue Contini</a> from Swintons Art Club mentored me for 6 years on various painting techniques.</p>
+
+  <br>
+  <p class="p-box2">I always thought I’d become an artist, until I discovered Scratch at the start of high school. I got hooked instantly, designing and coding many dozens of little <a href="https://k11games.itch.io/" target="_blank"> games</a> on the platform from 2016 to 2021. Eventually I was lucky enough to become very known in the Scratch community and met up with the Scratch Team and the creator of Scratch, <a href="https://en.wikipedia.org/wiki/Mitchel_Resnick" target="_blank">Mitchel Resnick</a>
+, in the MIT Media Lab in Boston, which was one of the coolest days of my life. One of the photos above shows us together. That sparked my interest in computer science, which eventually led me to study it at Western University in Ontario.</p>
+  
+ <br>
+  <p class="p-box2">Outside of art and programming, I enjoy gyming, running, playing pool, finding new music, watching K-movies, and travelling. So yeah, that basically summarizes my life so far! Feel free to message me to chat about anything. </p>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      `,
   projects: `
   
  <br><br><h2>Projects</h2>
@@ -423,7 +454,6 @@ window.addEventListener('DOMContentLoaded', () => {
   <a href="https://www.swintonsart.com/" target="_blank" style="text-decoration: underline;">Swinton's Art Club</a> (<a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view my art</a>)  (2014 to 2020)
 </p>
 
-
     <p>See more at my <a href="https://www.linkedin.com/in/kevin-yang-liu/" target="_blank" style="text-decoration: underline;">LinkedIn</a></p>
         <br>
         <br>
@@ -447,14 +477,33 @@ window.addEventListener('DOMContentLoaded', () => {
         <br>
       `,
       skills: `
-        <br><br><h2>Skills</h2>
+        <br><br><h2>Technical Skills</h2>
         <br>
-        <p ><strong style="color: var(--red);">Languages:</strong> <br>Python, Java, C++, C, C#, R, JavaScript, SQL, HTML5, CSS</p>
-        <br>
-        <p ><strong style="color: var(--red);">Frameworks & Tools:</strong> <br>React, Node.js, Flask, Bootstrap, Git, YOLO, FFmpeg, Figma</p>
-        <br>
-        <p ><strong style="color: var(--red);">Libraries:</strong> <br>NumPy, Polars, Scikit-Learn, Pandas, Matplotlib, Seaborn</p>
-        <br>
+
+<p>
+  <strong style="color: var(--red);">Machine Learning:<br></strong> YOLO, XGBoost, PCA <br><br>
+  <strong style="color: var(--red);">Full Stack Development:<br></strong> React, Node.js, MongoDB, REST API, Flask <br><br>
+  <strong style="color: var(--red);">Data Science:<br></strong> NumPy, Pandas, Scikit-Learn, Matplotlib, Polars <br><br>
+  <strong style="color: var(--red);">Tools:<br></strong> Figma, Bootstrap, Angular, FFmpeg, Figma <br><br>
+  <strong style="color: var(--red);">Software Practices:<br></strong> Agile Scrum, Unit Testing, System Testing, UI/UX Design <br>
+</p>
+
+<br><br><br>
+<h2>Soft Skills</h2>
+<br>
+<p>
+ <strong style="color: var(--red);">Leadership:<br></strong> Led teams to execute multi-phase tasks <br><br>
+
+<strong style="color: var(--red);">Communication:<br></strong> Communicated clearly with team leads, supervisors, and members <br><br>
+
+<strong style="color: var(--red);">Adaptability:<br></strong> Worked effectively with multiple teams in different environments <br>
+
+</p>
+
+</p>
+
+
+        <br><br>
        <p ><strong style="color: var(--red);">Languages Spoken:</strong></p>
 
 <div style="text-align: center; margin: 5px 0;">
@@ -480,6 +529,15 @@ window.addEventListener('DOMContentLoaded', () => {
   <div style="background-color: var(--green); width: 150px; height: 10px; border-radius: 5px; margin: 5px auto;
               border: 1px solid darkred;">
     <div style="width: 40%; height: 100%; background-color: var(--red); border-radius: 5px;
+                box-shadow: 2px 0px 0px darkred;"></div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 5px 0;">
+  <p> Japanese <br> (currently learning) </p>
+  <div style="background-color: var(--green); width: 150px; height: 10px; border-radius: 5px; margin: 5px auto;
+              border: 1px solid darkred;">
+    <div style="width: 5%; height: 100%; background-color: var(--red); border-radius: 5px;
                 box-shadow: 2px 0px 0px darkred;"></div>
   </div>
 </div>
@@ -511,21 +569,25 @@ window.addEventListener('DOMContentLoaded', () => {
       `,
       
       achievements: `
-        <br><br><h2>Certificates & Random Achievements</h2>
+        <br><br><h2>Certificates</h2>
     <br>
     <p>IBM Z Xplore - Concepts Certificate</p>
     <p>IBM Z Xplore - Advanced Certificate</p>
-    <p>Spanish DELE A1, A2, B1 Exams</p>
-    <p>Google Cloud Professional Data Engineer Certificate - In Progress</p>
     <p>Completed HTML CSS JS and Graph Theory Algorithm Udemy courses</p>
+    <p>Google Cloud Professional Data Engineer Certificate - In Progress</p>
+    <p>Spanish DELE A1, A2, B1 Exams</p>
+    
+    <br><br><h2>Random Achievements</h2><br>
     <p>2nd place in the Power Round of ASDAN Math Tournament</p>
     <p>Top 20% in Guts round at ASDAN Math Tournament</p>
     <p>President's Scholarship of Distinction Entrance Scholarship at Waterloo (UW)</p>
     <p>Alexander Rutherford Scholarship</p>
-    
+    <p>Above 80% in all CS courses at Western University</p>
     <p>AP Scholar with Distinction</p>
     <p>Top 1% SAT Scorer - 800 math, 710 reading</p>
-    <p>Above 80% in all CS courses at Western University</p>
+    <p>Highest course % in Math 30-1 in the grade at Webber Academy</p>
+    <p>Calgary Junior Chess Center Top Notice Player of Sept 2016</p>
+    <p>Painted 50+ oil paintings of realistic nature scenes (<a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view art</a>)</p>
     <p>110+ average wpm typer (<a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a>)</p>
     <p>21st most followed user on Scratch (<a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a>)</p>
     <p>7 million total views on all games (<a href="https://k11games.itch.io/" target="_blank"style="text-decoration: underline;">view games</a>)</p>
