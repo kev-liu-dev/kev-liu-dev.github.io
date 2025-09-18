@@ -292,7 +292,7 @@ font-family: "Press Start 2P", system-ui
     --blue: #0496ff;
     --darkblue: #008aed;
     /*dark dark purple not actually green now*/
-    --green: #C218CC; 
+    --green: #FFFFFF; 
     --purple: #6578F0;
     --darkpurple: #4158EC;
 }
@@ -499,7 +499,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   background: linear-gradient(45deg, #2B0028, #4F003E);
   color: white !important;
   border-radius: 25px; 
-  padding: 10px 15px; 
+  padding: 10px 20px; 
   max-width: 800px; 
   border: 3px groove var(--blue);
   text-align: center;
@@ -580,8 +580,8 @@ box-shadow:
   background: linear-gradient(45deg, #2B0028, #4F003E);
   color: white !important;
   border-radius: 25px; 
-  padding: 10px 15px; 
-  max-width: 800px; 
+  padding: 20px 25px; 
+  max-width: 550px; 
   border: 3px groove var(--blue);
   text-align: center;
   margin: auto;
