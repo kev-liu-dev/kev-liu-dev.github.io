@@ -136,7 +136,7 @@ font-family: "Press Start 2P", system-ui
     right: 0;
     /*the little light highlight line at the top of the nav bar */
     height: 4.85px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.07);
     /*animation: scanline 5s ease-out infinite;*/
     z-index: 1;
 }
@@ -144,6 +144,7 @@ font-family: "Press Start 2P", system-ui
 
 
 .game-card {
+  overflow: hidden;
     background: linear-gradient(45deg, #2B0028, #4F003E);
     
     border: 3px groove var(--darkpurple);
@@ -489,13 +490,14 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
     right: 0;
     /*the little light highlight line at the top of the nav bar */
     height: 4.85px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.07);
     /*animation: scanline 5s ease-out infinite;*/
     z-index: 1;
 }
 
 
 .p-box {
+  overflow: hidden;
   background: linear-gradient(45deg, #2B0028, #4F003E);
   color: white !important;
   border-radius: 25px; 
@@ -505,7 +507,6 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   text-align: center;
   margin: auto;
 
-  /* Initial transform: slightly offset */
   transform: translate(-10px, 10px);
 
 box-shadow: 
@@ -570,13 +571,17 @@ box-shadow:
     right: 0;
     /*the little light highlight line at the top of the nav bar */
     height: 4.85px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.07);
+    opacity: 1;
     /*animation: scanline 5s ease-out infinite;*/
     z-index: 1;
 }
 
 
 #content-area .p-box2 {
+  overflow: hidden;
+  z-index: 2;
+   position: relative; 
   background: linear-gradient(45deg, #2B0028, #4F003E);
   color: white !important;
   border-radius: 25px; 
@@ -585,6 +590,7 @@ box-shadow:
   border: 3px groove var(--blue);
   text-align: center;
   margin: auto;
+  
   opacity: 1;
   
 
@@ -618,6 +624,8 @@ box-shadow:
     pointer-events: none; 
     box-shadow: none;    
 }
+
+
 
 #content-area .p-box2:hover::after {
     background: #FF8FBA;  
