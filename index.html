@@ -5,7 +5,28 @@
 
 <link rel="icon" href="profile.jpg" type="image/jpeg">
 <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin's Page</title>
+  <style id="dynamic-zoom">
+    html {
+      zoom: 0.5;
+    }
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
 
+      // Detect mobile devices
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      // Apply zoom based on device
+      const zoomStyle = document.getElementById('dynamic-zoom');
+      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.5 : 0.8}; }`;
+    });
+  </script>
+</head>
 
 <body>
   <div class="container">
@@ -176,7 +197,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     <div class="nav-container">
       <nav class="nav-bar">
-      <a class="nav-item" data-page="aboutme"><strong>About Me</strong></a>
+      <a class="nav-item" data-page="aboutme"><strong>About</strong></a>
        <a class="nav-item active" data-page="projects"><strong>Projects</strong></a>
 <a class="nav-item" data-page="experiences"><strong>Experiences</strong></a>
 <a class="nav-item" data-page="skills"><strong>Skills</strong></a>
@@ -212,17 +233,8 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
   <p class="p-box2">Since then I’ve been studying Computer Science at Western and gaining experience through internships. At Google IT in Beijing I worked on optimizing CTR prediction models with TenserFlow. At Tianjin Uni of Science & Tech I led a team to label and preprocess large datasets for YOLO models.</p>
   
  <br>
-  <p class="p-box2">Outside of work I enjoy going to the gym, playing pool, drawing, and listening to music, hanging with friends, and travelling. Feel free to shoot me a message through Linkedin, or any other way about anything!</p>
+  <p class="p-box2">Outside of work I enjoy going to the gym, playing pool, drawing, and listening to music, hanging with friends, and travelling. Feel free to shoot me a message through Linkedin, Discord, or other ways about anything!</p>
          <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
@@ -381,26 +393,14 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
       
       
     </div>
-     <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
       `,
       experiences: `
         <br><br><h2>Experiences</h2>
@@ -455,6 +455,10 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
 </p><br>
 
     <p>See more at my <a href="https://www.linkedin.com/in/kevin-yang-liu/" target="_blank" style="text-decoration: underline;">LinkedIn</a></p>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
         <br>
@@ -542,27 +546,8 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
   </div>
 </div>
 
-         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        
       
 </div>
 
@@ -593,12 +578,6 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
     <p>110+ average wpm typer (<a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a>)</p>
     <p>21st most followed user on Scratch (<a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a>)</p>
     <p>7 million total views on all games (<a href="https://k11games.itch.io/" target="_blank"style="text-decoration: underline;">view games</a>)</p>
-         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
@@ -619,9 +598,23 @@ I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin,
         <br>
         <p>Email: kliu469@uwo.ca</p> <br>
         <p>Phone: (403) 660-3554</p><br>
-        <p>GitHub: <a href="https://github.com/kevin-yang-liu" style="text-decoration: underline;">kevin-yang-liu</a></p><br>
         <p>LinkedIn: <a href="https://linkedin.com/in/kevin-yang-liu/" style="text-decoration: underline;">kevin-yang-liu</a></p><br>
-         <br>
+        <p>GitHub: <a href="https://github.com/kevin-yang-liu" style="text-decoration: underline;">kevin-yang-liu</a></p><br>
+        <p>Discord: <a href="https://discord.com/users/kevineleven1234" style="text-decoration: underline;">kevineleven1234</a></p><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
         <br>
