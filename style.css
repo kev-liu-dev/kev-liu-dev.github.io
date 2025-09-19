@@ -306,57 +306,35 @@ font-family: "Press Start 2P", system-ui
 
 /*font-family: "Press Start 2P", system-ui;*/
 
-
-
 body {
   font-family: "Montserrat", sans-serif;
   padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    background-size: 200% 100%;
-  background-position: 0 0;
-  
-  background-color: #2B0040; 
-  background-image: radial-gradient(circle, rgba(214, 51, 132, 0.4) 2px, transparent 4px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 
-  background-size: 40px 40px; 
-  animation: moveDots 20s linear infinite; 
+  background: 
+    radial-gradient(circle, rgba(214, 51, 132, 0.07) 1px, transparent 3px), 
+    radial-gradient(circle, rgba(214, 51, 132, 0.4) 2px, transparent 4px),
+    linear-gradient(to right, #200040 0%, #2B0040 100%); 
+
+  background-size: 20px 20px, 40px 40px;
+  background-position: 0 0, 0 0;
+
+  background-color: #2B0040;
+
+  animation: moveDots 20s linear infinite;
 }
 
 @keyframes moveDots {
   from {
-    background-position: 0 0;
+    background-position: 0 0, 0 0; /
   }
   to {
-    background-position: 200px -200px; 
+    background-position: 100px -100px, 200px -200px; 
   }
 }
-
-
-/*body {*/
-  
-    /*background: linear-gradient(150deg, rgba(0,212,255,1) 0%, rgba(9,121,107,1) 0%, rgba(2,0,36,1) 76%);*/
-/*    color: var(--white);*/
-/*    padding: 20px;*/
-/*    height: 100vh;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    overflow-x: hidden;*/
-/*  background-image: repeating-linear-gradient(*/
-/*    -45deg,*/
-/*    rgb(43, 0, 40) 0 30px,     */
-/*    rgb(30, 0, 40) 30px 60px    */
-/*  );*/
-  /*background-image: repeating-linear-gradient(*/
-  /*  -45deg,*/
-  /*  rgb(43, 0, 40) 0 30px,     */
-  /*  rgb(30, 0, 40) 30px 60px    */
-  /*);*/
-/*  background-size: 200% 100%;*/
-/*  background-position: 0 0;*/
-/*  animation: moveStripes 40s linear infinite;*/
 
 
 /*}*/
