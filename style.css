@@ -464,7 +464,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 
 #intro-text.fade-in p {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 #main-title,
@@ -585,7 +585,7 @@ box-shadow:
   border: 3px groove var(--blue);
   text-align: center;
   margin: auto;
-  opacity: 0.85;
+  opacity: 1;
   
 
   /* Initial transform: slightly offset */
