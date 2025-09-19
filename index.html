@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const images = [
     "imgs/img1.jpg", "imgs/img2.jpg", "imgs/img3.jpg", "imgs/img4.jpg",
-    "imgs/img5.jpg", "imgs/img6.jpg", "imgs/img7.jpg", "imgs/img8.jpg",
-    "imgs/img9.jpg", "imgs/img10.jpg", "imgs/img11.jpg", "imgs/img12.jpg", "imgs/img13.jpg"
+    "imgs/img5.jpg", "imgs/img14.jpg", "imgs/img6.jpg", "imgs/img7.jpg", "imgs/img8.jpg",
+    "imgs/img9.jpg", "imgs/img10.jpg", "imgs/img11.jpg", "imgs/img15.jpg", "imgs/img12.jpg", "imgs/img13.jpg"
   ];
   
   let currentIndex = 0;
@@ -89,7 +89,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function startSlideshow() {
-    intervalId = setInterval(toggleImage, 3000);
+    // number milliseconds per pic
+    intervalId = setInterval(toggleImage, 2000);
     statusText.textContent = "Click to pause slideshow";
   }
 
@@ -199,13 +200,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const pages = {
       aboutme: `
          
-          <br><br><h2>My Story</h2><br><br>
+          <br><br><h2>About Me</h2><br><br>
  <p class="p-box2">
-I was born in Toronto but grew up mostly in Calgary, with a year in Tianjin where my family is from. Growing up I was very into art. I spent weekends at many aet schools and had a mentor who taught me oil painting for several years.
+I was born in Toronto but grew up mostly in Calgary and a little bit in Tianjin, China and Vancouver. Growing up I loved drawing and spent my weekends at an oil painting school, thinking I was going to become an artist.
 </p>
 
   <br>
-  <p class="p-box2">In high school I discovered Scratch and started making dozens of small games on the platform, and that really shifted my interests toward programming. I even got to meet the Scratch Team and the creator of Scratch, Mitchel Resnick, at the MIT Media Lab (photo above), which further confirmed I wanted to pursue CS.</p>
+  <p class="p-box2">In high school I discovered Scratch and started making dozens of small games on the platform, and that really shifted my interests toward programming. I even got to meet the Scratch Team and the creator of Scratch, Mitchel Resnick, at the MIT Media Lab (photo above), which further strengthened my appreciation for the tech community.</p>
 
   <br>
   <p class="p-box2">Since then I’ve been studying Computer Science at Western and gaining experience through internships. At Google IT in Beijing I worked on CTR prediction models with Python, and at Tianjin University of Science and Technology I led a team preparing large datasets for YOLO models and wrote Python preprocessing scripts.</p>
@@ -422,7 +423,7 @@ I was born in Toronto but grew up mostly in Calgary, with a year in Tianjin wher
 </p>
 
 <p>Game Designer @ 
-  <a href="https://k11games.itch.io/" target="_blank" style="text-decoration: underline;">K11 Games</a> (2016 to 2022)
+  <a href="https://k11games.itch.io/" target="_blank" style="text-decoration: underline;">K11 Games</a> (2016 to 2021)
 </p>
 
 <br><br>
@@ -579,12 +580,14 @@ I was born in Toronto but grew up mostly in Calgary, with a year in Tianjin wher
     <br><br><h2>Random Achievements</h2><br>
     <p>2nd place in the Power Round of ASDAN Math Tournament</p>
     <p>Top 20% in Guts round at ASDAN Math Tournament</p>
-    <p>President's Scholarship of Distinction Entrance Scholarship at Waterloo (UW)</p>
+    <p>1st place in the Entertainment Category at the Toronto Tech Expo</p>
+    <p>President's Entrance Scholarship of Distinction for Waterloo Software Eng</p>
+    <p>UofT Scarborough and Missisauga Entrance Scholarship for Applied Stats</p>
     <p>Alexander Rutherford Scholarship</p>
-    <p>Above 80% in all CS courses at Western University</p>
+    <p>A in all CS courses at Western University</p>
     <p>AP Scholar with Distinction</p>
     <p>Top 1% SAT Scorer - 800 math, 710 reading</p>
-    <p>Highest grade for the Math 30-1 course in the grade at the number one ranked highschool in Alberta</p>
+    <p>Highest grade in Math 30-1 in the grade at Alberta's number 1 ranked high school</p>
     <p>Calgary Junior Chess Center Top Notice Player of Sept 2016</p>
     <p>Painted 50+ oil paintings of realistic nature scenes (<a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view art</a>)</p>
     <p>110+ average wpm typer (<a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a>)</p>
