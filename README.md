@@ -1,8 +1,10 @@
 # Videos + Websites Featuring My Games
-## Youtube playlist featuring gameplay reviews of my games:
+Putting this list together to keep track of them in the future :)
+
+## Youtube playlist featuring them:
 
 https://www.youtube.com/playlist?list=PL8mvmizvPHsOVDc7f93RPcyxgXHmC7JG5
-## A few websites featuring my games:
+## A list of websites featuring them:
 
 Eyes Cube on ArcadeSpot:
 
