@@ -17,16 +17,16 @@
     }
   </style>
   <script>
-    
-    window.addEventListener('load', () => {v
+    window.addEventListener('load', () => {
       window.scrollTo(0, 0);
-
+  
       const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
+  
       const zoomStyle = document.getElementById('dynamic-zoom');
-      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.5 : 1}; }`;
+      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.5 : 0.9}; }`;
     });
   </script>
+  
 </head>
 
 <body>
