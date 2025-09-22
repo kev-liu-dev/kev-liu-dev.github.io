@@ -17,15 +17,14 @@
     }
   </style>
   <script>
+    
     window.addEventListener('load', () => {v
       window.scrollTo(0, 0);
 
-      // Detect mobile devices
       const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      // Apply zoom based on device
       const zoomStyle = document.getElementById('dynamic-zoom');
-      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.5 : 0.8}; }`;
+      zoomStyle.innerHTML = `html { zoom: ${isMobile ? 0.5 : 1}; }`;
     });
   </script>
 </head>
@@ -54,6 +53,8 @@
         <br>
         <br>
       </div>
+     
+      
       <h1 id="main-title">KEVIN Y LIU<br><br></h1>
 <div id="intro-text">
   <p class="p-box"> Hello! I&apos;m a final-year Computer Science specialized undergrad @ Western University in Ontario, Canada 🇨🇦</p>
@@ -578,8 +579,7 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
     <br><br><h2>FUN ACHIEVEMENTS</h2><br>
     <p>Top Novice Player at Calgary Junior Chess Center (Sept 2016)</p>
     <p>Painted 50+ oil paintings of realistic nature scenes: <a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">view art</a></p>
-    <p>Recorded 190 wpm typing record for 10 words: <a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a></p>
-    <p>Ranked 21st most followed user on Scratc:h <a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a></p>
+      <p>Ranked 21st most followed user on Scratc:h <a href="https://scratchviews.com/users/kevin_eleven_1234" target="_blank" style="text-decoration: underline;">view stats</a></p>
     <p>Made 22 games with over 100k views each: <a href="https://k11games.itch.io/" target="_blank"style="text-decoration: underline;">view games</a></p>
     <p>Gameplay video (3M views) of Finger Driver starting @ 12:33: <a href="https://www.youtube.com/watch?v=a1k2MwdJPHE&list=PL8mvmizvPHsOVDc7f93RPcyxgXHmC7JG5&index=1&t=3s" target="_blank"style="text-decoration: underline;">view video</a></p>
     <p>Gameplay video (300k views) of Space Frenzy starting @ 5:17: <a href="https://www.youtube.com/watch?v=85p0pkRoqDI" target="_blank"style="text-decoration: underline;">view video</a></p>
@@ -587,7 +587,24 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
     
     <p>More gameplay videos of my games created by others: <a href="https://www.youtube.com/playlist?list=PL8mvmizvPHsOVDc7f93RPcyxgXHmC7JG5" target="_blank"style="text-decoration: underline;">view playlist</a></p>
      <p>Website my games have been featured in: <a href="https://k11games.itch.io/videos-websites-featuring-my-games" target="_blank"style="text-decoration: underline;">view websites</a></p>
-    
+     <p>
+  Recorded 190 wpm typing record for 10 words:
+  <a href="https://monkeytype.com/profile/keveleven" style="text-decoration: underline;">view stats</a>
+</p> 
+<p>Here's me typing 150 wpm 3 times back to back:</p><br>
+
+<video
+  width="480"
+  height="258"
+  controls
+  style="border: 3px solid blue;
+         border-radius: 15px;
+         box-shadow: 0 0px 8px #170015;">
+  <source src="3-in-a-row.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
     
     
         <br>
