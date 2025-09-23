@@ -609,18 +609,45 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
         <br>
       `,
       contact: `
-        <br><br><h2>CONTACT ME</h2>
-        <br>
-        <p>📧 Email: <a href="mailto:kliu469@uwo.ca" style="text-decoration: underline;">kliu469@uwo.ca</a></p> <br>
-        <p>📱 Phone: <a href="tel:+14036603554" style="text-decoration: underline;">(403) 660-3554</a></p><br>
-        <p>💼 LinkedIn: <a href="https://linkedin.com/in/kevin-yang-liu/" style="text-decoration: underline;">kevin-yang-liu</a></p><br>
-        <p>🐙 GitHub: <a href="https://github.com/kevin-yang-liu" style="text-decoration: underline;">kevin-yang-liu</a></p><br>
-        <p>🎮 Discord: <a href="https://discord.com/users/kevineleven1234" style="text-decoration: underline;">kevineleven1234</a></p><br>
-        <p>📷 Art Insta: <a href="https://www.instagram.com/kevinarttt" style="text-decoration: underline;">kevinarttt</a></p><br>
-        <p>🕹️ Itch.io: <a href="https://k11games.itch.io/" style="text-decoration: underline;">k11games</a></p><br>
-        <p>▶️ YouTube: <a href="https://www.youtube.com/@kevinelevengames" style="text-decoration: underline;">kevinelevengames</a></p><br>
+        <br><br><h2>CONTACT ME</h2><br><br>
+        <style>
+  .contact-block {
+    display: grid;
+    grid-template-columns: max-content auto; /* left column = fit label, right = fill */
+    gap: 15px 0px; /* vertical | horizontal spacing */
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .contact-block p {
+    margin: 0;
+    display: contents; /* makes <p> not break grid alignment */
+  }
+  .contact-block .label {
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .contact-block .value a {
+    text-decoration: underline;
+  }
+</style>
 
-        <br>
+<div class="contact-block">
+  <p><span class="label">📧 Email</span><span class="value"><a href="mailto:kliu469@uwo.ca">kliu469@uwo.ca</a></span></p>
+  <p><span class="label">📱 Phone</span><span class="value"><a href="tel:+14036603554">(403) 660-3554</a></span></p>
+  <p><span class="label">💼 Personal LinkedIn</span><span class="value"><a href="https://linkedin.com/in/kevin-yang-liu/">kevin-yang-liu</a></span></p>
+  <p><span class="label">💼 Games LinkedIn</span><span class="value"><a href="https://www.linkedin.com/company/k11-games/">k11-games</a></span></p>
+  <p><span class="label">🔗 GitHub</span><span class="value"><a href="https://github.com/kevin-yang-liu">kevin-yang-liu</a></span></p>
+  <p><span class="label">👾 Discord</span><span class="value"><a href="https://discord.com/users/kevineleven1234">kevineleven1234</a></span></p>
+  <p><span class="label">📷 Art Insta</span><span class="value"><a href="https://www.instagram.com/kevinarttt">kevinarttt</a></span></p>
+  <p><span class="label">🕹️ Itch.io</span><span class="value"><a href="https://k11games.itch.io/">k11games</a></span></p>
+  <p><span class="label">▶️ YouTube</span><span class="value"><a href="https://www.youtube.com/@kevinelevengames">kevinelevengames</a></span></p>
+</div>
+
+
+
         <br>
         <br>
         <br>
