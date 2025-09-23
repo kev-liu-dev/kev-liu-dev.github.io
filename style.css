@@ -583,7 +583,7 @@ box-shadow:
   padding: 20px 25px; 
   max-width: 550px; 
   border: 3px groove var(--blue);
-  text-align: center;
+  text-align: left;
   margin: auto;
   margin-bottom: 6px!important; 
 
@@ -621,6 +621,31 @@ box-shadow:
 }
 
 
+.video-box {
+  display: inline-block;
+  position: relative;   
+  z-index: 2;           
+  border: 3px groove var(--blue);
+  box-shadow: 
+      -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
+      -10px 10px 0 var(--black),
+      0 0px 8px #170015,
+      -10px 10px 8px #170015;
+  margin: auto;
+  margin-bottom: 6px!important; 
+  transition: all 0.2s ease-out, opacity 0.4s ease-out;
+}
+
+
+.video-box:hover {
+  background: linear-gradient(45deg, #2B0028, #2B0028);
+  transform: translate(-10px, 10px);  
+  box-shadow: 
+      -1px 1px 0 var(--black);
+}
 
 #content-area .p-box2:hover::after {
     background: #FF8FBA;  
@@ -906,4 +931,3 @@ p a {
     0% { opacity: 0.1; }
     100% { opacity: 0; }
   
-
