@@ -608,8 +608,8 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
         <br>
       `,
       contact: `
-        <br><br><h2>CONTACT</h2><br><br>
-        <style>
+       <br><br><h2>CONTACT</h2><br><br>
+<style>
   .contact-block {
     display: grid;
     grid-template-columns: max-content auto; 
@@ -618,6 +618,7 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.8;
+    position: relative; /* allows shifting */
   }
   .contact-block p {
     margin: 0;
@@ -634,6 +635,13 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
   .contact-block .value a {
     text-decoration: underline;
   }
+
+
+  @media (max-width: 768px) {
+    .contact-block {
+      left: -19px;
+    }
+  }
 </style>
 
 <div class="contact-block">
@@ -647,6 +655,7 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
   <p><span class="label">Discord Account</span><span class="value"><a href="https://discord.com/users/kevineleven1234">kevineleven1234</a></span></p>
   <p><span class="label">YouTube Account</span><span class="value"><a href="https://www.youtube.com/@kevinelevengames">kevinelevengames</a></span></p>
 </div>
+
 
 
 
