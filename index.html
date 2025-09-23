@@ -132,7 +132,6 @@ window.addEventListener('DOMContentLoaded', () => {
     isPaused = !isPaused;
   });
 
-  // Start initially
   startSlideshow();
 </script>
 
@@ -613,8 +612,8 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
         <style>
   .contact-block {
     display: grid;
-    grid-template-columns: max-content auto; /* left column = fit label, right = fill */
-    gap: 15px 0px; /* vertical | horizontal spacing */
+    grid-template-columns: max-content auto; 
+    gap: 15px 0px; 
     max-width: 400px;
     margin: 0 auto;
     font-size: 1rem;
@@ -622,7 +621,7 @@ I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Van
   }
   .contact-block p {
     margin: 0;
-    display: contents; /* makes <p> not break grid alignment */
+    display: contents;
   }
   .contact-block .label {
     text-align: right;
