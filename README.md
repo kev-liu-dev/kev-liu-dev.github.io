@@ -82,12 +82,5 @@ No Internet Game on Heppocode Garage:
 
 https://www.catch.jp/heppocode-garage2/posts/2022/1/12/dino_runner/
 
-Username appearance in someone's typing game:
-
-https://typing.twi1.me/game/337435
-
-Featured in this poll:
-
-https://www.polltab.com/rJxVfmSVQ
 
 
