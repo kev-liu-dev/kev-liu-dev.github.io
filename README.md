@@ -36,6 +36,9 @@ https://makeymakey.com/blogs/blog/fun-fact-friday-great-scratch-games-for-plug-a
 Ball King on ScratchGames
 https://scratchgames.co/ball-king
 
+Drop the Ball on Scratch Coach
+https://en.scratch.coach/segment/drop-the-ball/
+
 Sling Drift on someone’s portfolio (digitalthought.info)
 https://digitalthought.info/austin/
 
