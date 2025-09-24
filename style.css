@@ -659,8 +659,6 @@ box-shadow:
       -1px 1px 0 var(--black);
 }
 
-
-
 .video-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -669,7 +667,6 @@ box-shadow:
   max-width: 800px;
   margin: auto;
 }
-
 
 .video-grid2 {
   display: grid;
@@ -684,7 +681,7 @@ box-shadow:
   text-align: center;
   border: 3px groove var(--blue);
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 20px!important;
   background: #2B0028;
   color: white;
   box-shadow: 
@@ -701,6 +698,18 @@ box-shadow:
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 1rem;
+}
+
+/* Collapse to 1 column on mobile */
+@media (max-width: 768px) {
+  .video-grid,
+  .video-grid2 {
+    grid-template-columns: 1fr;
+    transform: none !important; /* reset your -100px shift */
+    max-width: 95%; /* make it use most of the screen */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
