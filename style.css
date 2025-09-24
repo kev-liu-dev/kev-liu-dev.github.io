@@ -723,9 +723,9 @@ box-shadow:
 
 .nav-container {
     position: relative;
-    width: 105%;
+    width: 110%;
     height: 45px;
-    transform: translateX(-10px);
+    transform: translateX(-33px);
     /*the color gradient thing that i delete*/
     /*background-color: var(--black);*/
     /*border: 3px solid var(--purple);*/
@@ -778,7 +778,7 @@ box-shadow:
 
 
 .nav-container:hover {
-    transform: translateX(-7px) translateY(7px);
+    transform: translateX(-40px) translateY(7px);
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
        box-shadow: 
       
