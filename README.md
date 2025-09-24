@@ -54,6 +54,8 @@ https://ouka.me/segment/hobby/page/8/
 No Internet Game on Heppocode Garage
 https://www.catch.jp/heppocode-garage2/posts/2022/1/12/dino_runner/
 
+No Internet Game on ScratchGames
+https://scratchgames.co/no-internet-game
 
 Drop the Ball 2 on CSDN
 https://blog.csdn.net/llrraa2010/article/details/113805860?spm=1001.2101.3001.6650.1
