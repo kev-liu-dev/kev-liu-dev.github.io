@@ -35,28 +35,29 @@ font-family: "Press Start 2P", system-ui
 
 
 .bordered-img {
-  border: 10px solid blue;
   border-radius: 25px; 
   transition: 0.2s ease-out;
-  border: 3px groove var(--darkpurple);
+  border: 3px groove var(--blue);
     width: 300px;    
   height: 200px;     
   object-fit: cover;  
   object-position: center; 
-  border: 2px solid blue;  
+  
    
-    
-    
 
 
-    box-shadow: 
-      /*-2px 2px 0 var(--black),*/
-      /*-4px 4px 0 var(--black),*/
-      /*-6px 6px 0 var(--black),*/
-      /*-8px 8px 0 var(--black),*/
-      /*-10px 10px 0 var(--black),*/
-      0 0px 8px #170015;
-      /*-10px 10px 8px #170015;*/
+  box-shadow: 
+      
+  -2px 2px 0 var(--black),
+   -4px 4px 0 var(--black),
+   -6px 6px 0 var(--black),
+   -8px 8px 0 var(--black),
+   -10px 10px 0 var(--black),
+   0 0px 8px #170015,
+   -10px 10px 8px #170015;
+   /*-11px 11px 0 var(--black),*/
+   /*-12px 12px 0 var(--black),*/
+   /*-13px 13px 0 var(--black);*/
 }
 
 .status-text{
