@@ -723,8 +723,9 @@ box-shadow:
 
 .nav-container {
     position: relative;
-    width: 100%;
+    width: 105%;
     height: 45px;
+    transform: translateX(-10px);
     /*the color gradient thing that i delete*/
     /*background-color: var(--black);*/
     /*border: 3px solid var(--purple);*/
@@ -971,7 +972,7 @@ box-shadow:
 }
 
 p a {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 
