@@ -546,11 +546,12 @@ box-shadow:
 
 
 
-
+/* rounded corners of the about me text */
 #p1 { border-radius: 25px 25px 0 0!important; }
 #p2 { border-radius: 0px 0px 0px 0px!important; }
 #p3 { border-radius: 0px 0px 0px 0px!important; }
-#p4 { border-radius: 0 0 25px 25px!important; }
+#p4 { border-radius: 0 0 0px 0px!important; }
+#p5 { border-radius: 0 0 25px 25px!important; }
 
 
 
