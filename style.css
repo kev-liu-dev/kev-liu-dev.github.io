@@ -661,6 +661,47 @@ box-shadow:
 
 
 
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center; 
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.video-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 20px;
+  max-width: 760px; 
+  margin: 0 auto;
+  transform: translateX(-100px)!important;
+}
+
+.video-box2 {
+  text-align: center;
+  border: 3px groove var(--blue);
+  padding: 10px;
+  border-radius: 8px;
+  background: #2B0028;
+  color: white;
+  box-shadow: 
+      -2px 2px 0 var(--black),
+      -4px 4px 0 var(--black),
+      -6px 6px 0 var(--black),
+      -8px 8px 0 var(--black),
+      -10px 10px 0 var(--black),
+      0 0px 8px #170015,
+      -10px 10px 8px #170015;
+}
+
+.video-box2 p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 
 
