@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
+/* the drawn underline of the kevin y liu title */
 .title-underline {
   display: block;
   margin: -4px auto;
-  max-width: 200px;
+  max-width: 200px; 
+  /* ensures same size on mobile and pc */
   width: 100%; 
   height: auto;
+
 }
+
+.logo-underline {
+  display: block;
+  margin: -8px auto;
+  max-width: 80px; 
+  /* ensures same size on mobile and pc */
+  width: 50%; 
+  height: auto;
+
+}
+
+
+
 #content-area {
   text-align: center; 
 }
