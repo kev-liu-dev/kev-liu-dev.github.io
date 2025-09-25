@@ -23,6 +23,9 @@
   font-weight: 900;
   letter-spacing: 0px;
   font-family: "Montserrat", sans-serif;
+  text-shadow: 
+    -3px 3px 5px rgba(0, 123, 255, 0.4),   
+    -8px 8px 20px rgba(0, 123, 255, 0); 
 
  
 }
@@ -417,10 +420,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 
-  /* animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate; */
-
-
+  /* Oval blue shadow to bottom-left */
+  text-shadow: 
+    -3px 3px 5px rgba(0, 123, 255, 0.4),   
+    -8px 8px 20px rgba(0, 123, 255, 0.6);  
 }
+
 
 @keyframes floatText {
     0% { top: 0px; }
@@ -624,7 +629,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   border: 3px solid var(--blue);
   text-align: left;
   margin: auto;
-  margin-bottom: 6px!important; 
+  margin-bottom: 0px!important; 
 
 
   
@@ -685,7 +690,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
    0 0px 8px #170015,
    -10px 10px 8px #170015;
   margin: auto;
-  margin-bottom: 6px!important; 
+  margin-bottom: 0px!important; 
   transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
