@@ -336,14 +336,15 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
-  /* background: 
-    radial-gradient(circle, rgba(214, 51, 132, 0.1) 1px, transparent 3px), 
-    radial-gradient(circle, rgba(214, 51, 132, 0.4) 2px, transparent 4px); */
+  background: 
+    radial-gradient(circle, rgba(73, 117, 184, 0.1) 1px, transparent 3px), 
+    radial-gradient(circle, rgba(26, 100, 157, 0.4) 2px, transparent 4px);
+    /*linear-gradient(to right, #200040 0%, #2B0040 100%); */
 
   background-size: 20px 20px, 40px 40px;
   background-position: 0 0, 0 0;
 
-  background-color: #210032;
+  background-color: #000a40;
 
   animation: moveDots 20s linear infinite;
 }
@@ -356,6 +357,7 @@ body {
     background-position: 100px -100px, 200px -200px; 
   }
 }
+
 
 
 /*}*/
@@ -683,7 +685,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 #content-area .p-box2:hover {
-  background: linear-gradient(45deg, #2B0028, #2B0028);
+  /* background: linear-gradient(45deg, #2B0028, #2B0028); */
   transform: translate(-10px, 10px);  
   box-shadow: 
       -1px 1px 0 var(--black);
