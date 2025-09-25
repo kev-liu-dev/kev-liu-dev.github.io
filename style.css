@@ -756,6 +756,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 
 .nav-container {
+  background: #250038;
     position: relative;
     width: 110%;
     height: 45px;
