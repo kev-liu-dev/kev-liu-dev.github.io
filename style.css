@@ -12,32 +12,38 @@
   text-align: center; 
 }
 
+
 /*projects title text */
 #content-area h2 { 
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--yellow); 
-  text-shadow: 
+  /* text-shadow: 
     0 2px 0 var(--red),
-    -10px 10px 8px #360030;
+    -10px 10px 8px #360030; */
   font-weight: bold;
   letter-spacing: 0px;
-font-family: "Press Start 2P", system-ui
+  font-family: "Montserrat", sans-serif;
 
  
 }
 
 #content-area p {
   text-align: center;
+  font-weight: 300!important;
 
 }
 
 
 
 
+.label {
+  font-weight: 300;
+}
+
 .bordered-img {
-  border-radius: 25px; 
+  border-radius: 0px; 
   transition: 0.2s ease-out;
-  border: 3px groove var(--blue);
+  border: 3px solid var(--blue);
     width: 300px;    
   height: 200px;     
   object-fit: cover;  
@@ -48,10 +54,15 @@ font-family: "Press Start 2P", system-ui
 
   box-shadow: 
       
-  -2px 2px 0 var(--black),
+  -1px 1px 0 var(--black),
+   -2px 2px 0 var(--black),
+   -3px 3px 0 var(--black),
    -4px 4px 0 var(--black),
+   -5px 5px 0 var(--black),
    -6px 6px 0 var(--black),
+   -7px 7px 0 var(--black),
    -8px 8px 0 var(--black),
+   -9px 9px 0 var(--black),
    -10px 10px 0 var(--black),
    0 0px 8px #170015,
    -10px 10px 8px #170015;
@@ -147,9 +158,10 @@ font-family: "Press Start 2P", system-ui
 
 .game-card {
   overflow: hidden;
-    background: linear-gradient(45deg, #2B0028, #4F003E);
+    /* background: linear-gradient(45deg, #2B0028, #4F003E); */
+    background: #250038;
     
-    border: 3px groove var(--darkpurple);
+    border: 3px solid var(--darkpurple);
     padding: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -175,17 +187,19 @@ font-family: "Press Start 2P", system-ui
     align-self: flex-end; 
     box-shadow: 
       
+    -1px 1px 0 var(--black),
      -2px 2px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
-      /*-11px 11px 0 var(--black),*/
-      /*-12px 12px 0 var(--black),*/
-      /*-13px 13px 0 var(--black);*/
-          margin: 0; 
+     -3px 3px 0 var(--black),
+     -4px 4px 0 var(--black),
+     -5px 5px 0 var(--black),
+     -6px 6px 0 var(--black),
+     -7px 7px 0 var(--black),
+     -8px 8px 0 var(--black),
+     -9px 9px 0 var(--black),
+     -10px 10px 0 var(--black),
+     0 0px 8px #170015,
+     -10px 10px 8px #170015;
+    margin: 0; 
     align-self: flex-start; 
 }
 
@@ -196,7 +210,7 @@ font-family: "Press Start 2P", system-ui
     right: 13px;     
     width: 5px;   
     height: 5px;
-    background: #FFBAD3;
+    /* background: #FFBAD3; */
     border-radius: 50%;  
     opacity: 1;     
     pointer-events: none;
@@ -204,7 +218,7 @@ font-family: "Press Start 2P", system-ui
 }
 
 .game-card:hover::after {
-    background: #FF8FBA; 
+    /* background: #FF8FBA;  */
     opacity: 0.7;        
 }
 
@@ -232,7 +246,7 @@ font-family: "Press Start 2P", system-ui
 .game-card:nth-child(12)  { transform: translateZ(0px);    z-index: 4; }
 
 .game-card:hover {
-  background: linear-gradient(45deg, #2B0028, #2B0028);
+  /* background: linear-gradient(45deg, #2B0028, #2B0028); */
     /*height: 170px; */
     /*box-shadow: 0 0px 70px rgba(0, 0, 0, 1);*/
     /*border-radius: 30px 30px 0 0;*/
@@ -253,8 +267,8 @@ font-family: "Press Start 2P", system-ui
 .game-card h3 {
     margin-bottom: 50px;
     color: var(--yellow);
-      text-shadow: 
-    0 2px 0 var(--red);
+      /* text-shadow: 
+    0 2px 0 var(--red); */
     
 }
 
@@ -293,16 +307,17 @@ font-family: "Press Start 2P", system-ui
 
 
 :root {
-    --black: #781691;
-    --white: #f8f8f8;
-    --yellow: #ffbc42;
-    --red: #FF2B77;
+    --black: #0496ff;
+    --white: #0496ff;
+    --yellow: #0496ff;
+    --yellow2: #ffd30d;
+    --red: #0496ff;
     --blue: #0496ff;
-    --darkblue: #008aed;
+    --darkblue: #0496ff;
     /*dark dark purple not actually green now*/
-    --green: #FFFFFF; 
-    --purple: #6578F0;
-    --darkpurple: #4158EC;
+    --green: #0496ff; 
+    --purple: #0496ff;
+    --darkpurple: #0496ff;
 }
 
 * {
@@ -321,15 +336,14 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
-  background: 
+  /* background: 
     radial-gradient(circle, rgba(214, 51, 132, 0.1) 1px, transparent 3px), 
-    radial-gradient(circle, rgba(214, 51, 132, 0.4) 2px, transparent 4px);
-    /*linear-gradient(to right, #200040 0%, #2B0040 100%); */
+    radial-gradient(circle, rgba(214, 51, 132, 0.4) 2px, transparent 4px); */
 
   background-size: 20px 20px, 40px 40px;
   background-position: 0 0, 0 0;
 
-  background-color: #2B0040;
+  background-color: #250038;
 
   animation: moveDots 20s linear infinite;
 }
@@ -367,29 +381,21 @@ body {
 
 
 
+/* the KEVIN Y. LIU text */
 
 .header h1 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--yellow);
-    letter-spacing: -1px;
-    text-align: center;
-    position: relative;
-    font-family: "Press Start 2P", system-ui;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: var(--yellow);
+  letter-spacing: -1px;
+  text-align: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 
-    animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate;
+  /* animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate; */
 
-/*old blue yellow red font style*/
-    /*text-shadow: */
-    /*    2px 2px 0 var(--red),*/
-    /*    -2px -2px 0 var(--blue),*/
-    /*    0 0 0px var(--yellow),*/
-    /*    -10px 10px 8px #360030;*/
-       
-       
-         text-shadow: 
-    0 2px 0 var(--red),
-    -10px 10px 8px #360030;
+
 }
 
 @keyframes floatText {
@@ -445,7 +451,7 @@ p strong {
   font-size: 1.0rem !important;   
   
   /*text color*/
-  color: #FFFFFF !important; 
+  color: var(--blue) !important; 
   line-height: 1.4 !important;  
    opacity: 0.1;
 transition: all 0.2s ease-out, opacity 0.4s ease-out;
@@ -488,26 +494,32 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 .p-box {
   overflow: hidden;
-  background: linear-gradient(45deg, #2B0028, #4F003E);
-  color: white !important;
+  /* background: linear-gradient(45deg, #2B0028, #4F003E); */
+  background: #250038;
+  color: var(--blue) !important;
   padding: 10px 20px; 
   max-width: 800px; 
-  border: 3px groove var(--blue);
+  border: 3px solid var(--blue);
   text-align: center;
   margin: auto;
-  border-radius: 25px;
+  border-radius: 0px;
 
   transform: translate(-10px, 10px);
 
-box-shadow: 
+  box-shadow: 
       
-      -2px 2px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
+  -1px 1px 0 var(--black),
+   -2px 2px 0 var(--black),
+   -3px 3px 0 var(--black),
+   -4px 4px 0 var(--black),
+   -5px 5px 0 var(--black),
+   -6px 6px 0 var(--black),
+   -7px 7px 0 var(--black),
+   -8px 8px 0 var(--black),
+   -9px 9px 0 var(--black),
+   -10px 10px 0 var(--black),
+   0 0px 8px #170015,
+   -10px 10px 8px #170015;
 
   transition: transform 0.8s ease-out, background 0.2s ease-out;
 }
@@ -520,7 +532,7 @@ box-shadow:
     right: 11px;    
     width: 5px;     
     height: 5px;
-    background: #FFBAD3;
+    /* background: #FFBAD3; */
     border-radius: 50%; 
     opacity: 1;     
     pointer-events: none; 
@@ -528,7 +540,7 @@ box-shadow:
 }
 
 .p-box:hover::after {
-    background: #FF8FBA;  
+    /* background: #FF8FBA;   */
     opacity: 0.7;         
 }
 
@@ -538,7 +550,7 @@ box-shadow:
 }
 
 .p-box:hover {
-  background: linear-gradient(45deg, #2B0028, #2B0028);
+  /* background: linear-gradient(45deg, #2B0028, #2B0028); */
   transform: translate(-10px, 10px);  
   box-shadow: 
       -1px 1px 0 var(--black);
@@ -548,11 +560,11 @@ box-shadow:
 
 
 /* rounded corners of the about me text */
-#p1 { border-radius: 25px 25px 0 0!important; }
+/* #p1 { border-radius: 25px 25px 0 0!important; }
 #p2 { border-radius: 0px 0px 0px 0px!important; }
 #p3 { border-radius: 0px 0px 0px 0px!important; }
 #p4 { border-radius: 0 0 0px 0px!important; }
-#p5 { border-radius: 0 0 25px 25px!important; }
+#p5 { border-radius: 0 0 25px 25px!important; } */
 
 
 
@@ -568,7 +580,7 @@ box-shadow:
     right: 0;
     /*the little light highlight line at the top of the nav bar */
     height: 4.85px;
-    background: rgba(255, 255, 255, 0.07);
+    /* background: rgba(255, 255, 255, 0.07); */
     opacity: 1;
     /*animation: scanline 5s ease-out infinite;*/
     z-index: 1;
@@ -579,12 +591,13 @@ box-shadow:
   overflow: hidden;
   z-index: 2;
    position: relative; 
-  background: linear-gradient(45deg, #2B0028, #4F003E);
-  color: white !important;
-  border-radius: 25px; 
+  /* background: linear-gradient(45deg, #2B0028, #4F003E); */
+  background: #250038;
+  color: var(--blue) !important;
+  border-radius: 0px!important; 
   padding: 20px 25px; 
   max-width: 550px; 
-  border: 3px groove var(--blue);
+  border: 3px solid var(--blue);
   text-align: left;
   margin: auto;
   margin-bottom: 6px!important; 
@@ -594,21 +607,26 @@ box-shadow:
   opacity: 1;
   
 
-box-shadow: 
+  box-shadow: 
       
-      -2px 2px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
+  -1px 1px 0 var(--black),
+   -2px 2px 0 var(--black),
+   -3px 3px 0 var(--black),
+   -4px 4px 0 var(--black),
+   -5px 5px 0 var(--black),
+   -6px 6px 0 var(--black),
+   -7px 7px 0 var(--black),
+   -8px 8px 0 var(--black),
+   -9px 9px 0 var(--black),
+   -10px 10px 0 var(--black),
+   0 0px 8px #170015,
+   -10px 10px 8px #170015;
 
   transition: all 0.2s ease-out, opacity 0.4s ease-out;
 }
 
 
-#content-area .p-box2::after {
+/* #content-area .p-box2::after {
     content: "";
     position: absolute;
     top: 6px;       
@@ -621,21 +639,27 @@ box-shadow:
     pointer-events: none; 
     box-shadow: none;    
 }
-
+ */
 
 .video-box {
   display: inline-block;
   position: relative;   
   z-index: 2;           
-  border: 3px groove var(--blue);
+  border: 3px solid var(--blue);
   box-shadow: 
-      -2px 2px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
+      
+  -1px 1px 0 var(--black),
+   -2px 2px 0 var(--black),
+   -3px 3px 0 var(--black),
+   -4px 4px 0 var(--black),
+   -5px 5px 0 var(--black),
+   -6px 6px 0 var(--black),
+   -7px 7px 0 var(--black),
+   -8px 8px 0 var(--black),
+   -9px 9px 0 var(--black),
+   -10px 10px 0 var(--black),
+   0 0px 8px #170015,
+   -10px 10px 8px #170015;
   margin: auto;
   margin-bottom: 6px!important; 
   transition: all 0.2s ease-out, opacity 0.4s ease-out;
@@ -685,19 +709,25 @@ box-shadow:
 .video-box2 {
   transform: translateX(32px) !important; 
   text-align: center;
-  border: 3px groove var(--blue);
+  border: 3px solid var(--blue);
   padding: 10px;
-  border-radius: 20px!important;
+  border-radius: 0px!important;
   background: #2B0028;
   color: white;
   box-shadow: 
-      -2px 2px 0 var(--black),
-      -4px 4px 0 var(--black),
-      -6px 6px 0 var(--black),
-      -8px 8px 0 var(--black),
-      -10px 10px 0 var(--black),
-      0 0px 8px #170015,
-      -10px 10px 8px #170015;
+      
+  -1px 1px 0 var(--black),
+   -2px 2px 0 var(--black),
+   -3px 3px 0 var(--black),
+   -4px 4px 0 var(--black),
+   -5px 5px 0 var(--black),
+   -6px 6px 0 var(--black),
+   -7px 7px 0 var(--black),
+   -8px 8px 0 var(--black),
+   -9px 9px 0 var(--black),
+   -10px 10px 0 var(--black),
+   0 0px 8px #170015,
+   -10px 10px 8px #170015!important;
 }
 
 .video-box2 p {
@@ -728,25 +758,26 @@ box-shadow:
     width: 110%;
     height: 45px;
     transform: translateX(-33px);
-    /*the color gradient thing that i delete*/
-    /*background-color: var(--black);*/
-    /*border: 3px solid var(--purple);*/
-    /*padding: 5px;*/
-    /*margin-bottom: 30px;*/
-    /*animation: gradientShift 10s ease infinite;*/
-    /*box-shadow: 0 0 0 5px var(--black), */
-    /*            0 0 0 10px var(--purple),*/
-    /*            10px 10px 0 0 rgba(0,0,0,0.5);*/
+ 
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 0px;
 
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
     box-shadow: 0 0px 50px rgba(0, 0, 0,1);
-       box-shadow: 
+    box-shadow: 
       
-      -7px 7px 0 var(--black),
-      0 0px 8px #170015,
-      -7px 7px 8px #170015;
+    -1px 1px 0 var(--black),
+     -2px 2px 0 var(--black),
+     -3px 3px 0 var(--black),
+     -4px 4px 0 var(--black),
+     -5px 5px 0 var(--black),
+     -6px 6px 0 var(--black),
+     -7px 7px 0 var(--black),
+     -8px 8px 0 var(--black),
+     -9px 9px 0 var(--black),
+     -10px 10px 0 var(--black),
+     0 0px 8px #170015,
+     -10px 10px 8px #170015;
 }
 
 
@@ -754,29 +785,13 @@ box-shadow:
     content: '';
     position: absolute;
     top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(270deg, #ffbc42, #8067b7, #0496ff, #d81159);
-    background-size: 800% 800%;
+    
     z-index: -1;
     filter: blur(6px);
-    animation: gradientShift 10s ease infinite;
+    /* animation: gradientShift 10s ease infinite; */
     border-radius: 12px;
 }
 
-
-/* little white dot on the top right of nav bar*/
-/* .nav-container::after {
-    content: "";
-    position: absolute;
-    top: 10px;      
-    right: 15px;    
-    width: 5px;     
-    height: 5px;
-    background: white;
-    border-radius: 50%;
-    opacity: 1;       
-    pointer-events: none; 
-    box-shadow: none;     
-} */
 
 
 .nav-container:hover {
@@ -861,21 +876,14 @@ box-shadow:
     height: 100%;
     padding: 5px;
 
-   background: repeating-linear-gradient(
-    -45deg,
-    var(--purple),
-    var(--purple) 60px,
-    var(--darkpurple) 60px,
-    var(--darkpurple) 120px
-    
-);
+   background: none;
 
     background-size: 200% 100%;
     animation: moveStripes 15s linear infinite;
 
-/*the rectangle ourline thats innermost in the navbar */
+/*the rectangle outline thats innermost in the navbar */
     border: 3px solid var(--black);
-    border-radius: 20px; 
+    border-radius: 0px; 
     position: relative;
     overflow: hidden;
     
@@ -902,7 +910,7 @@ box-shadow:
     right: 0;
     /*the little light highlight line at the top of the nav bar */
     height: 4.85px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
     /*animation: scanline 5s ease-out infinite;*/
     z-index: 1;
 }
@@ -926,25 +934,46 @@ box-shadow:
     z-index: 2;
     text-shadow: 
       0 2px 0 rgba(65, 7, 66, 0.5);
+      font-weight: 300!important;
 }
 
 /*when hovered over a nav bar word like projects */
 .nav-item:hover {
-    transform: scale(1.0); 
-    color: var(--yellow);
-    background-color: rgba(48, 35, 82, 0.2); 
-    border-radius: 0 0 13px 13px;
-    padding: 4px 10px; 
-    text-shadow: 
-      0 3px 0 rgba(65, 7, 66, 0.5);
+  transform: scale(1.0); 
+  /* padding-bottom: 0px; */
+  /* position: relative; */
+  background-color: none; /* inside color */
+  border-radius: 0 0 0px 0px;
+  border-left:  1px solid var(--blue);
+border-right: 1px solid var(--blue);
+border-bottom: 1px solid var(--blue);
+border-top: 1px solid var(--blue);
+border-radius: 0px;
+  padding: 4px 8px; 
+  color: var(--yellow);
 }
 
 /*rectangle behind nav bar words like projects */
 .nav-item.active {
-    background-color: rgba(248, 248, 248, 0.2); 
-    border-radius: 0 0 13px 13px;
-    color: var(--yellow);
+  transform: scale(1.0); 
+  /* padding-bottom: 0px; */
+  /* position: relative; */
+  background-color: none; /* inside color */
+  border-radius: 0 0 0px 0px;
+  border-left:  2px solid var(--blue);
+border-right: 2px solid var(--blue);
+border-bottom: 2px solid var(--blue);
+border-top: 2px solid var(--blue);
+border-radius: 0px;
+  padding: 4px 10px; 
+  color: var(--yellow);
+  /* margin-top: -6.5px;
+  padding-left: 20px!important;
+  padding-right: 20px!important; */
+  /* margin-bottom: -6px; */
 }
+
+
 
 
 
