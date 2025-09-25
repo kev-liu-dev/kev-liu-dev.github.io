@@ -4,7 +4,7 @@
 .title-underline {
   display: block;
   margin: -4px auto;
-  max-width: 200px; 
+  max-width: 190px; 
   /* ensures same size on mobile and pc */
   width: 100%; 
   height: auto;
@@ -379,14 +379,13 @@ body {
   animation: moveDots 20s linear infinite;
 }
 
-/* move the dots in the background */
-
+/* move the dots/stars in the background */
 .dot {
   position: absolute;
-  border-radius: 50%;
-  background-color: var(--blue);
+  background: url("star.svg") no-repeat center/contain;
   animation: moveFade 4s forwards;
-  z-index: -1!important;
+  z-index: -1 !important;
+  border-radius: 0; 
 }
 
 
