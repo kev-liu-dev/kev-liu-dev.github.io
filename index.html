@@ -880,22 +880,45 @@ features: `
         <br>
   </p>
   
+  <script>
+    const MAX_DOTS = 120; 
+    const DOT_LIFETIME = 8000; 
+    const DOT_INTERVAL = 200; 
   
+    function createDot() {
+      const dot = document.createElement("div");
+      dot.className = "dot";
   
+      const size = Math.random() * 4 + 2;
+      dot.style.width = size + "px";
+      dot.style.height = size + "px";
   
-<!--<audio id="hover-sound" src="coin.mp3" preload="auto"></audio>-->
-<!--<script>-->
-<!--  const hoverSound = document.getElementById("hover-sound");-->
-
-<!--  document.querySelectorAll(".game-card, .nav-item").forEach(item => {-->
-<!--    item.addEventListener("mouseenter", () => {-->
-<!--      hoverSound.currentTime = 0;-->
-<!--      hoverSound.play();-->
-<!--    });-->
-<!--  });-->
-<!--</script>-->
-
-
+      const pageHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+  
+      dot.style.left = Math.random() * window.innerWidth + "px";
+      dot.style.top = Math.random() * pageHeight + "px";
+  
+      dot.style.setProperty("--x", (Math.random() - 0.5) * 400 + "px");
+      dot.style.setProperty("--y", (Math.random() - 0.5) * 400 + "px");
+  
+      document.body.appendChild(dot);
+  
+      setTimeout(() => dot.remove(), DOT_LIFETIME);
+    }
+  
+    function maintainDots() {
+      const currentDots = document.querySelectorAll(".dot").length;
+      if (currentDots < MAX_DOTS) {
+        createDot();
+      }
+    }
+  
+    setInterval(maintainDots, DOT_INTERVAL);
+  </script>
+  
 
 
 </body>
