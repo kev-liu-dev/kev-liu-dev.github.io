@@ -14,13 +14,10 @@
 .logo-underline {
   display: block;
   margin: -8px auto;
-  max-width: 80px; 
-  /* ensures same size on mobile and pc */
-  width: 50%; 
+  width: 80px;
+  max-width: 80px;
   height: auto;
-
 }
-
 
 
 #content-area {
