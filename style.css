@@ -20,7 +20,7 @@
   /* text-shadow: 
     0 2px 0 var(--red),
     -10px 10px 8px #360030; */
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: 0px;
   font-family: "Montserrat", sans-serif;
 
@@ -29,7 +29,7 @@
 
 #content-area p {
   text-align: center;
-  font-weight: 300!important;
+  font-weight: 300;
 
 }
 
@@ -159,7 +159,7 @@
 .game-card {
   overflow: hidden;
     /* background: linear-gradient(45deg, #2B0028, #4F003E); */
-    background: #250038;
+    background: var(--dark);
     
     border: 3px solid var(--darkpurple);
     padding: 10px;
@@ -266,6 +266,8 @@
 /*project title */
 .game-card h3 {
     margin-bottom: 50px;
+    font-weight: 900;
+    
     color: var(--yellow);
       /* text-shadow: 
     0 2px 0 var(--red); */
@@ -305,8 +307,23 @@
     color: var(--white);
 }
 
+@keyframes moveFade {
+  0% {
+      transform: translate(0, 0);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translate(var(--x), var(--y));
+      opacity: 0;
+  }
+}
+
 
 :root {
+    --dark: #250038;
     --black: #0496ff;
     --white: #0496ff;
     --yellow: #0496ff;
@@ -336,18 +353,26 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
-  background: 
-    radial-gradient(circle, rgba(73, 117, 184, 0.1) 1px, transparent 3px), 
-    radial-gradient(circle, rgba(26, 100, 157, 0.4) 2px, transparent 4px);
-    /*linear-gradient(to right, #200040 0%, #2B0040 100%); */
+  
 
   background-size: 20px 20px, 40px 40px;
   background-position: 0 0, 0 0;
 
-  background-color: #000a40;
+  background-color: #250038;
 
   animation: moveDots 20s linear infinite;
 }
+
+/* move the dots in the background */
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--blue);
+  animation: moveFade 4s forwards;
+  z-index: -1!important;
+}
+
 
 @keyframes moveDots {
   from {
@@ -358,9 +383,6 @@ body {
   }
 }
 
-
-
-/*}*/
 
 @keyframes moveStripes {
   0% {
@@ -393,7 +415,7 @@ body {
   text-align: center;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 900;
 
   /* animation: scanlines 6s linear infinite, floatText 4s ease-in-out infinite alternate; */
 
@@ -734,7 +756,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
 
 .video-box2 p {
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 900!important;
   font-size: 1rem;
 }
 
@@ -952,7 +974,7 @@ border-right: 1px solid var(--blue);
 border-bottom: 1px solid var(--blue);
 border-top: 1px solid var(--blue);
 border-radius: 0px;
-  padding: 4px 8px; 
+  padding: 4px 3px; 
   color: var(--yellow);
 }
 
