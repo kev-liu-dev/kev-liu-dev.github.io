@@ -959,12 +959,12 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   transform: rotateY(180deg);
 }
 
-
+/* flip the logo  */
 @keyframes autoFlip {
-  0%, 45% {
+  0%, 85% {
     transform: rotateY(0deg);
   }
-  50%, 95% {
+  90%, 95% {
     transform: rotateY(180deg);
   }
   100% {
