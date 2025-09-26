@@ -138,19 +138,23 @@ window.addEventListener('DOMContentLoaded', () => {
     img.src = images[currentIndex];
   }
 
- function startSlideshow() {
+  function startSlideshow() {
   // 2000 is 2 secs per pic
   intervalId = setInterval(toggleImage, 2000);
-  statusText.innerHTML = "<br>Click to pause";
+  statusText.innerHTML = `
+    <br>Click to pause 
+    <img src="arrow.svg" alt="arrow" style="width:20px; height:auto; vertical-align:middle;  margin-bottom:8px; margin-left:5px;">
+  `;
   statusText.style.position = "relative";
-  statusText.style.left = "-10px";
+  statusText.style.left = "0px";
 }
 
 function stopSlideshow() {
   clearInterval(intervalId);
-  statusText.innerHTML = "<br>Click to <span style='text-decoration: underline;'>resume</span>";
+  statusText.innerHTML = "<br>Click to resume";
   statusText.style.position = "relative";
-  statusText.style.left = "-10px";
+  
+  statusText.style.left = "-8px";
 }
 
 
