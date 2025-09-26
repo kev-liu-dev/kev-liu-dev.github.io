@@ -203,6 +203,8 @@
     grid-template-columns: repeat(3, 1fr); 
     gap: 6px;
     margin-top: 40px;
+    perspective: 1000px; 
+    
 }
 
 
@@ -1124,3 +1126,4 @@ p a {
     100% { opacity: 0; }
   
 }
+
