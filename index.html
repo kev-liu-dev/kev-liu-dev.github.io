@@ -954,39 +954,41 @@ features: `<br><br>
         <br>
         <br>
   </p>
-  
   <script>
     const MAX_DOTS = 300; 
     const DOT_LIFETIME = 4000; 
     const DOT_INTERVAL = 50; 
   
     function createDot() {
-  const dot = document.createElement("div");
-  dot.className = "dot";
-
-  const size = Math.random() * 10 + 8;
-  dot.style.width = size + "px";
-  dot.style.height = size + "px";
-
-  const pageHeight = Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight
-  );
-
-  dot.style.left = Math.random() * window.innerWidth + "px";
-  dot.style.top = Math.random() * pageHeight + "px";
-
-  dot.style.setProperty("--x", (Math.random() - 0.5) * 400 + "px");
-  dot.style.setProperty("--y", (Math.random() - 0.5) * 400 + "px");
-
-  // flip horizontally half the time
-  dot.style.setProperty("--flipX", Math.random() < 0.5 ? -1 : 1);
-
-  document.body.appendChild(dot);
-
-  setTimeout(() => dot.remove(), DOT_LIFETIME);
-}
-
+      const dot = document.createElement("div");
+      dot.className = "dot";
+  
+      const size = Math.random() * 10 + 8;
+      dot.style.width = size + "px";
+      dot.style.height = size + "px";
+  
+      const pageHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight
+      );
+  
+      const pageWidth = Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth
+      );
+  
+      dot.style.left = Math.random() * pageWidth + "px";
+      dot.style.top = Math.random() * pageHeight + "px";
+  
+      dot.style.setProperty("--x", (Math.random() - 0.5) * 400 + "px");
+      dot.style.setProperty("--y", (Math.random() - 0.5) * 400 + "px");
+  
+      dot.style.setProperty("--flipX", Math.random() < 0.5 ? -1 : 1);
+  
+      document.body.appendChild(dot);
+  
+      setTimeout(() => dot.remove(), DOT_LIFETIME);
+    }
   
     function maintainDots() {
       const currentDots = document.querySelectorAll(".dot").length;
@@ -998,6 +1000,5 @@ features: `<br><br>
     setInterval(maintainDots, DOT_INTERVAL);
   </script>
   
-
 
 </body>
