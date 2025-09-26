@@ -29,8 +29,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) translateY(13px);
-  width: 220px; 
+  transform: translate(-50%, -30%);
+  width: 270px; 
   height: auto;
   z-index: 1;
 }
@@ -51,8 +51,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) translateY(14px);
-  width: 260px; 
+  transform: translate(-50%, -27%);
+  width: 320px; 
   height: auto;
   z-index: 1; 
   opacity: 1; 
