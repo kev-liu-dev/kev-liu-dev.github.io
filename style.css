@@ -343,7 +343,7 @@
 
 .game-card .short-desc {
     font-size: 0.8rem;
-    color: var(--red)
+    color: var(--red);
     text-decoration: none;
 }
 
@@ -374,19 +374,6 @@
     color: var(--white);
 }
 
-@keyframes moveFade {
-  0% {
-      transform: translate(0, 0);
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      transform: translate(var(--x), var(--y));
-      opacity: 0;
-  }
-}
 
 
 :root {
@@ -1060,7 +1047,7 @@ transition: all 0.2s ease-out, opacity 0.4s ease-out;
   transform: scale(1.0); 
   /* padding-bottom: 0px; */
   /* position: relative; */
-  background-color: none; /* inside color */
+  background-color: transparent; /* inside color */
   border-radius: 0 0 0px 0px;
   border-left:  1px solid var(--blue);
 border-right: 1px solid var(--blue);
@@ -1076,7 +1063,7 @@ border-radius: 0px;
   transform: scale(1.0); 
   /* padding-bottom: 0px; */
   /* position: relative; */
-  background-color: none; /* inside color */
+  background-color: transparent; /* inside color */
   border-radius: 0 0 0px 0px;
   border-left:  2px solid var(--blue);
 border-right: 2px solid var(--blue);
@@ -1136,3 +1123,4 @@ p a {
     0% { opacity: 0.1; }
     100% { opacity: 0; }
   
+}
