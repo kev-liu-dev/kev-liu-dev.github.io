@@ -91,12 +91,12 @@
 
 
 
-/*.bordered-img:hover {*/
-/*  background: linear-gradient(45deg, #2B0028, #2B0028);*/
-/*  transform: translate(-10px, 10px);  */
-/*  box-shadow: */
-/*      -1px 1px 0 var(--black);*/
-/*}*/
+.bordered-img:hover { 
+   background: linear-gradient(45deg, #2B0028, #2B0028);
+ transform: translate(-10px, 10px);  
+ box-shadow: 
+     -1px 1px 0 var(--black);
+}
 
 
 
