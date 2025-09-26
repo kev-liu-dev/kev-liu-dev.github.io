@@ -16,20 +16,20 @@
 .title-wrapper {
   position: relative; 
   display: inline-block; 
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .title-wrapper h2 {
   position: relative;
   z-index: 2; 
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .scroll-underline {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-52%, -28%);
+  transform: translate(-52%, -29%);
   width: 270px; 
   height: auto;
   z-index: 1;
@@ -51,7 +51,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -27%);
+  transform: translate(-53%, -24%);
   width: 320px; 
   height: auto;
   z-index: 1; 
