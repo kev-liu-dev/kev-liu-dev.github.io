@@ -139,14 +139,18 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
  function startSlideshow() {
-  // number milliseconds per pic
+  // 2000 is 2 secs per pic
   intervalId = setInterval(toggleImage, 2000);
-  statusText.innerHTML = "<br>Click to pause slideshow";
+  statusText.innerHTML = "<br>Click to pause";
+  statusText.style.position = "relative";
+  statusText.style.left = "-10px";
 }
 
 function stopSlideshow() {
   clearInterval(intervalId);
-  statusText.innerHTML = "<br>Click to <span style='text-decoration: underline;'>resume</span> slideshow";
+  statusText.innerHTML = "<br>Click to <span style='text-decoration: underline;'>resume</span>";
+  statusText.style.position = "relative";
+  statusText.style.left = "-10px";
 }
 
 
@@ -254,10 +258,9 @@ function stopSlideshow() {
  <p class="p-box2" id="p1">
 I was born in Toronto but grew up mostly in Calgary and a bit in Tianjin and Vancouver. Growing up I loved <a href="https://www.instagram.com/kevinarttt" target="_blank" style="text-decoration: underline;">drawing</a> and spent my weekends at an oil painting school to try to become an artist.
 </p>
-
   
   <p class="p-box2" id="p2">From 2016 to around 2021, I loved making games on <a href="https://scratch.mit.edu/users/kevin_eleven_1234/" target="_blank" style="text-decoration: underline;">Scratch</a> as a passion hobby, which is what first sparked my interest in programming. I seeked inspiration from hypercasual App Store games and retro pixel games.
-    <br><br>Over time, people started noticing my simple, fast-paced games and I eventually became the 7th-most-followed game creator (<a href="https://scratchviews.com/rankings/users/popular" target="_blank" style="text-decoration: underline;">21st-followed overall</a>) on Scratch, a programming platform with 135 million users. 
+    <br><br>Over time, people started noticing my simple, fast-paced games and I eventually became the 7th most-followed game creator on Scratch, a programming platform with 135 million users. 
     <br><br>A highlight of that journey was being invited to the MIT Media lab to meet the Scratch Team and <a href="https://www.google.com/search?q=mithcel+resnick&oq=mithcel+resnick&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQLhgKGIAEMgwIAhAuGAoYsQMYgAQyCQgDEAAYChiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyDwgGEC4YChjHARjRAxiABDIJCAcQABgKGIAEMg8ICBAuGAoYrwEYxwEYgATSAQgxNzAxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" style="text-decoration: underline;">Mitchel Resnick</a>, the creator of Scratch (last photo above). 
     
   </p>
