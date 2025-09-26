@@ -245,7 +245,7 @@
     
     /*width and height of game cards*/
     width: 215px;
-    height: 255px;
+    height: 285px;
     transform: translate(-10px, 10px);
     
     transition: transform 0.2s ease-out, background 0.2s ease-out, box-shadow 0.2s;
@@ -342,19 +342,20 @@
     text-shadow: 
   -1px 1px 0 #2a6a92d2;
   font-weight: 800!important;
+  font-size: 1.3rem!important;
   
 }
 
 .game-card .short-desc {
   font-weight: 300!important;
-  font-size: 0.8rem;
+  font-size: 1.25rem!important;
   color: var(--red);
   text-decoration: none;
 }
 
 .game-card .extra-info {
   display: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem!importantl
   color: var(--green);
   margin-top: 5px;
   line-height: 1.3;
